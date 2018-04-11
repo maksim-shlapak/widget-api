@@ -1,0 +1,23 @@
+{
+  "name": "@annoto/widget-api",
+  "version": "1.4.0",
+  "description": "Annoto Widget API definitions",
+  "license": "Apache-2.0",
+  "author": "Genadi Sokolov [genadis.pub@gmail.com]",
+  "engines": {
+    "node": ">=6.0"
+  },
+  "types": "./lib/index.d.ts",
+  "main": "./lib/index.js",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Annoto/widget-api.git"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.7.0"
+  },
+  "dependencies": {}
+}
