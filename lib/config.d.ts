@@ -77,6 +77,7 @@ export interface AnnotoFeatures {
     darkTheme?: boolean;
     cta?: boolean;
     minibar?: boolean;
+    popout?: boolean;  // Does nothing at the moment. For future use
 }
 
 export interface AnnotoConfig {
