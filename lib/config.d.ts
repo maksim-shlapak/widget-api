@@ -21,12 +21,6 @@ export interface WidgetMargins {
     minAdaptive?: number;
 }
 
-export interface WidgetDockConfig {
-    enable?: boolean;
-    positions?: string[];
-    'default'?: boolean;
-}
-
 export interface ThreadConfig {
     showReplies?: boolean;
     rtOnOnFirstPlay?: boolean;
@@ -44,7 +38,7 @@ export interface PlayerConfig {
 }
 
 export interface TimelineConfig {
-    embedded?: boolean;
+    embedded?: boolean;  // Deprecated. The value is ignored. Embedded timeline is not supported.
     height?: number;
     overlayVideo?: boolean;
     disableDockPadding?: boolean;
@@ -94,7 +88,6 @@ export interface AnnotoConfig {
     simple?: boolean;
     rtl?: boolean;
     locale?: string;
-    dock?: WidgetDockConfig;
     widgets: WidgetConfig[];
     thread?: ThreadConfig;
     demoMode: boolean;
