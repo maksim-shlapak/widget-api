@@ -74,18 +74,34 @@ export interface AnnotoFeatures {
     popout?: boolean;  // Does nothing at the moment. For future use
 }
 
+export interface UxConfig {
+    commentsTopToBottom?: boolean; // false by default. If set to true comments start will be at the top instead of bottom
+    draggableDisabled?: boolean; // false by default.
+    /**
+     * @description if set to true, the widget will behave like a side panel if open.
+     * 1. Will take full available height of the player.element / relativePositionElement.
+     * 2. Will not be draggable.
+     * // false by default. 
+     */
+    sidePanel?: boolean; 
+    /**
+     * @description For SSO enabled clientId only. if Provided, Will be called when user triggers Authentication.
+     * If not provided a message in the form is shown.
+     * @returns {Promise<void>} If possible the promise should reslove/reject when the auth flow is finished.
+     */
+    ssoAuthRequestHandle?: () => Promise<void>;
+}
+
 export interface AnnotoConfig {
     clientId: string;
-    position?: string;
-    phonePosition?: string;
+    position?: 'right' | 'left' | 'bottom';
+    phonePosition?: 'right' | 'left';
     relativePositionElement?: string | Element;
     align?: WidgetAlignConfig;
     width?: WidgetSizeConfig;
     height?: WidgetSizeConfig;
     margins?: WidgetMargins;
-    adaptToElement?: boolean;
-    enableDraggable?: boolean;
-    simple?: boolean;
+    ux?: UxConfig;
     rtl?: boolean;
     locale?: string;
     widgets: WidgetConfig[];
