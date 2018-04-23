@@ -2,6 +2,7 @@ import { AnnotoConfig } from './config';
 import { DeviceDetectorApi } from './device-detector';
 import { AnnotoMetadata } from './metadata';
 import { MediaDetails } from './media-details';
+import { AnnotoUxEvent } from './ux-event';
 
 export interface OriginProvider {
     getPageUrl: () => string;
@@ -19,15 +20,16 @@ export interface AnnotoApi {
     getMetadata(): AnnotoMetadata;
 }
 
-type AnnotoEventType = 'ready' | 'metadata';
+type AnnotoEventType = 'ready' | 'metadata' | 'ux';
 type AnnotoReadyCallback = (api: AnnotoApi) => void;
 type AnnotoMetadataCallback = (metadata: AnnotoMetadata) => void;
+type AnnotoUxEventCallback = (uxEvent: AnnotoUxEvent) => void;
 
 export interface Annoto {
-    on: (event: AnnotoEventType, cb: AnnotoReadyCallback | AnnotoMetadataCallback) => void;
+    on: (event: AnnotoEventType, cb: AnnotoReadyCallback | AnnotoMetadataCallback | AnnotoUxEventCallback) => void;
     boot: (config: AnnotoConfig) => void;
 }
 
-export { AnnotoConfig, DeviceDetectorApi, AnnotoMetadata, MediaDetails };
+export { AnnotoConfig, DeviceDetectorApi, AnnotoMetadata, MediaDetails, AnnotoUxEvent };
 
 export declare const Annoto: Annoto;
