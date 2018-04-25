@@ -70,6 +70,7 @@ export interface AnnotoFeatures {
     userPreferences?: boolean;
     darkTheme?: boolean;
     cta?: boolean;
+    threadVote?: boolean;
     minibar?: boolean;
     popout?: boolean;  // Does nothing at the moment. For future use
 }
