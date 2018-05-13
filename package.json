@@ -1,6 +1,6 @@
 {
   "name": "@annoto/widget-api",
-  "version": "1.6.13",
+  "version": "1.6.15",
   "description": "Annoto Widget API definitions",
   "license": "Apache-2.0",
   "author": "Genadi Sokolov [genadis.pub@gmail.com]",
