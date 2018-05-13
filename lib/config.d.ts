@@ -86,6 +86,17 @@ export interface UxConfig {
      */
     sidePanel?: boolean; 
     /**
+     * @description Triggers for automatically pause the player.
+     * All true by default.
+     */
+    pauseTriggers?: {
+        formOpen?: boolean;
+        authTrigger?: boolean;
+        widgetOpenOnPhone?: boolean;
+        cta?: boolean;
+        timelineUgcTap?: boolean;
+    };
+    /**
      * @description For SSO enabled clientId only. if Provided, Will be called when user triggers Authentication.
      * If not provided a message in the form is shown.
      * @returns {Promise<void>} If possible the promise should reslove/reject when the auth flow is finished.
