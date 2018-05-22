@@ -374,7 +374,9 @@ export interface PlayerAdaptorApi {
     trackMarginRight?: () => number | string;
 
 // Events - callbacks to be called when certain events take place.
-// No need to support multiple registrations for same event. We register only once.
+// No need to support multiple registrations for same event.
+// Annoto registeres on the events on Annoto.boot() and on each time annotoApi.load() is called.
+// Notice the description of the adaptor remove() method above.
 // Annoto will register to those Events after the init() call returns true.
 
     /**
