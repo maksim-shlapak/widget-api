@@ -75,7 +75,7 @@ export interface ControlsDescriptorTransitions {
 
     hideTiming?: string;
     /**
-     * Set the css timming for controls show.
+     * Set the css timming for controls hide.
      * Default: '0s linear'
      */
 }
@@ -194,6 +194,7 @@ export interface PlayerAdaptorApi {
      * @description (OPTIONAL) called by Annoto to release resources when the widget is closing.
      * NOTICE: Although optional this method is highly recommended if you use Annoto API
      * to dynamically load and close the widget.
+     * The adaptor implementation should discard the events that were regsitered using the onReady, onPlay, etc. when remove() is called.
      */
     remove?: () => void | Promise<void>;
 
