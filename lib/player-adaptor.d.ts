@@ -186,9 +186,10 @@ export interface PlayerAdaptorApi {
      *         No retries shall be performed. Annoto will wait for Promise resolve/reject.
      *
      * @param element - html DOM element of the player (as configured by Annoto API)
+     * @param params - player.params of API configuration
      * @returns {boolean/Promise}
      */
-    init: (element: Element) => boolean | Promise<boolean>;
+    init: (element: Element, params: any) => boolean | Promise<boolean>;
 
     /**
      * @description (OPTIONAL) called by Annoto to release resources when the widget is closing.
