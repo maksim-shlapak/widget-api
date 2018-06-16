@@ -6,6 +6,7 @@ import { AnnotoUxEvent } from './ux-event';
 
 export interface OriginProvider {
     getPageUrl: () => string;
+    getMediaDeepLinkUrl?: (currentTime: number, mediaSrc: string) => string;
 }
 
 export interface AnnotoApi {
