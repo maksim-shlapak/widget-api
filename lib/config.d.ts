@@ -128,4 +128,5 @@ export interface AnnotoConfig {
     demoMode: boolean;
     launchSource?: LaunchSourceConfig;
     features?: AnnotoFeatures;
+    helpUrl?: string;
 }
