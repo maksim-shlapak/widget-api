@@ -81,12 +81,6 @@ export interface ControlsDescriptorTransitions {
 }
 
 export interface ControlsDescriptorTimeline {
-    hideOnHide?: boolean;
-    /**
-     * If set to true, the timeline will fully hide when controls are hidden.
-     * Instead of appearing in minimised mode.
-     */
-
     fadeInOut?: boolean;
     /**
      * If set to true, and hideOnHide is true as well, the timeline will fade out/in.
@@ -111,10 +105,10 @@ export interface ControlsDescriptor {
      * The height in pixels of the controls
      */
 
-    progressBarOffInOverlay?: boolean;
+    scrubberOnInOverlay?: boolean;
     /**
-     * if true the custom progress bar (not the timeline) will be force disabled in overlay.
-     * In other cases logic will be applied of when to show it and when to hide it.
+     * if true the custom scrubber bar will be enabled in overlay.
+     * By default player controls scrubber is assumed to present in overlay and the custom scrubber is not shown.
      */
 
     track: ControlsDescriptorTrack;
@@ -300,6 +294,14 @@ export interface PlayerAdaptorApi {
      * @returns {boolean}
      */
     fixFullScreen?: () => boolean;
+
+    /**
+     * @description (OPTIONAL) Get player controls Element of type DIV for embedding
+     * annoto timeline for overlay and full screen mode.
+     * NOTE: if not supported the function must be undefined.
+     * @returns {Element}
+     */
+    controlsElement?: () => Element;
 
     /**
      * @description (OPTIONAL) Get player Element of type DIV for embedding
