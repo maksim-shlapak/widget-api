@@ -48,11 +48,24 @@ export interface TimelineConfig {
     scrubberColor?: string;
 }
 
+export interface StatsConfig {
+    /**
+     * 
+     */
+    host: HTMLElement;
+}
+
 export interface WidgetConfig {
     player: PlayerConfig;
     timeline?: TimelineConfig;
     openOnLoad?: boolean;
     demoDiscussion?: string;
+    /**
+     * @description If provided the discusion widget will be embedded inside the host element instead of as overlay
+     * The size of the widget is responsive and set to 100% width and height of the host element.
+     */
+    host?: HTMLElement;
+    stats?: StatsConfig;
 }
 
 export interface LaunchSourceConfig {
@@ -74,6 +87,7 @@ export interface AnnotoFeatures {
     voteEmotions?: boolean;
     commentSentiment?: boolean;
     minibar?: boolean;
+    stats?: boolean;   // if enabled StatsConfig must be provided
     popout?: boolean;  // Does nothing at the moment. For future use
 }
 
