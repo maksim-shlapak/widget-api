@@ -143,4 +143,6 @@ export interface AnnotoConfig {
     launchSource?: LaunchSourceConfig;
     features?: AnnotoFeatures;
     helpUrl?: string;
+    zIndex?: number;
+    fsZIndex?: number;
 }
