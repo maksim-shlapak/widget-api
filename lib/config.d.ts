@@ -15,7 +15,7 @@ export interface WidgetMargins {
     left?: number;
     right?: number;
     top?: number;
-    bottom: number;
+    bottom?: number;
     min?: number;
     rightSmall?: number;
     minAdaptive?: number;
@@ -34,7 +34,7 @@ export interface PlayerConfig {
     wide?: boolean;
     params?: any;
     mediaSrc?: () => string; // for setting the player media source.
-    mediaDetails?: () => MediaDetails;
+    mediaDetails?: (details?: MediaDetails) => MediaDetails | Promise<MediaDetails>;
 }
 
 export interface TimelineConfig {
