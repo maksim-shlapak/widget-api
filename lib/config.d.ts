@@ -121,12 +121,12 @@ export interface UxConfig {
      * If not provided a message in the form is shown.
      * @returns {Promise<void>} If possible the promise should reslove/reject when the auth flow is finished.
      */
-    ssoAuthRequestHandle?: () => Promise<void>;
+    ssoAuthRequestHandle?(): Promise<void>;
     /**
      * @description If Provided, Will be called when user triggers Logout action.
      * @returns {Promise<void>} If possible the promise should reslove/reject when the logout flow is finished.
      */
-    logoutRequestHandle?: () => Promise<void>;
+    logoutRequestHandle?(): Promise<void>;
 }
 
 export interface AnnotoConfig {
