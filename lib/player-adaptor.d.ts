@@ -187,7 +187,7 @@ export interface PlayerAdaptorApi {
      * @param params - player.params of API configuration
      * @returns {boolean/Promise}
      */
-    init: (element: Element, params: any) => boolean | Promise<boolean>;
+    init(element: Element, params: any): boolean | Promise<boolean>;
 
     /**
      * @description (OPTIONAL) called by Annoto to release resources when the widget is closing.
@@ -195,23 +195,23 @@ export interface PlayerAdaptorApi {
      * to dynamically load and close the widget.
      * The adaptor implementation should discard the events that were regsitered using the onReady, onPlay, etc. when remove() is called.
      */
-    remove?: () => void | Promise<void>;
+    remove?(): void | Promise<void>;
 
     /**
      * @description Start playing the media
      */
-    play: () => void | Promise<void>;
+    play(): void | Promise<void>;
 
     /**
      * @description Pause the media
      */
-    pause: () => void | Promise<void>;
+    pause(): void | Promise<void>;
 
     /**
      * @description Set the media current time of track (skip/seek to time of the track)
      * @param time - in seconds
      */
-    setCurrentTime: (time: number) => void | Promise<void>;
+    setCurrentTime(time: number): void | Promise<void>;
 
     /**
      * @description (OPTIONAL) If defined will be called at view refreshes of the widget.
@@ -220,20 +220,20 @@ export interface PlayerAdaptorApi {
      * @param isPhone {boolean}
      * @param isFullScreen {boolean}
      */
-    updateControlsDescriptor?: (isPhone: boolean, isFullScreen: boolean) => void;
+    updateControlsDescriptor?(isPhone: boolean, isFullScreen: boolean): void;
 
     /**
      * @description (OPTIONAL) Return if the media is a live stream or a VOD.
      * NOTE: if the method is not implemented VOD is assumed.
      * @returns {boolean | Promise<boolean>}
      */
-    isLive?: () => boolean | Promise<boolean>;
+    isLive?(): boolean | Promise<boolean>;
 
     /**
      * @description Get time of current playback position.
      * @returns {Number | Promise<number>} - in seconds. Preferred Floating point precision.
      */
-    currentTime: () => number | Promise<number>;
+    currentTime(): number | Promise<number>;
 
     /**
      * @description Get the total media track duration in seconds
@@ -242,25 +242,25 @@ export interface PlayerAdaptorApi {
      * (for DVR enabled live stream, it can defer from currentTime)
      * @returns {Number | NaN | Promise<number>} - in seconds
      */
-    duration: () => number | Promise<number>;
+    duration(): number | Promise<number>;
 
     /**
      * @description Get player playback state (playing or paused)
      * @returns {boolean | Promise<boolean>} - true if pause, false if playing
      */
-    paused: () => boolean | Promise<boolean>;
+    paused(): boolean | Promise<boolean>;
 
     /**
      * @description Get full URL of the currently played media source.
      * @returns {string | Promise<string>}
      */
-    mediaSrc: () => string | Promise<string>;
+    mediaSrc(): string | Promise<string>;
 
     /**
      * @description (OPTIONAL) Get Details for the media.
      * @return {MediaDetails | Promise<MediaDetails>}
      */
-    mediaMetadata?: () => MediaDetails | Promise<MediaDetails>;
+    mediaMetadata?(): MediaDetails | Promise<MediaDetails>;
 
     /**
      * @description Get player autoplay configuration option
@@ -268,14 +268,14 @@ export interface PlayerAdaptorApi {
      * If such an option is not supported, return false.
      * @returns {boolean | Promise<boolean>}
      */
-    autoplay: () => boolean | Promise<boolean>;
+    autoplay(): boolean | Promise<boolean>;
 
     /**
      * @description Get player controls description parameters.
      * The parameters describe behavior of the player controls.
      * @returns {ControlsDescriptor} controls descriptor object
      */
-    controlsDescriptor: () => ControlsDescriptor;
+    controlsDescriptor(): ControlsDescriptor;
 
     /**
      * @description (OPTIONAL) Get player full screen state.
@@ -284,7 +284,7 @@ export interface PlayerAdaptorApi {
      * Below it is defined only for purposes of API documentation.
      * @returns {boolean}
      */
-    fullScreen?: () => boolean;
+    fullScreen?(): boolean;
 
     /**
      * @description (OPTIONAL) By default Annoto will try applying a fix
@@ -297,7 +297,7 @@ export interface PlayerAdaptorApi {
      * NOTE: if not required/supported the function must be undefined.
      * @returns {boolean}
      */
-    fixFullScreen?: () => boolean;
+    fixFullScreen?(): boolean;
 
     /**
      * @description (OPTIONAL) Get player controls Element of type DIV for embedding
@@ -305,7 +305,7 @@ export interface PlayerAdaptorApi {
      * NOTE: if not supported the function must be undefined.
      * @returns {Element}
      */
-    controlsElement?: () => Element;
+    controlsElement?(): Element;
 
     /**
      * @description (OPTIONAL) Get player Element of type DIV for embedding
@@ -313,7 +313,7 @@ export interface PlayerAdaptorApi {
      * NOTE: if not supported the function must be undefined.
      * @returns {Element}
      */
-    embeddableElement?: () => Element;
+    embeddableElement?(): Element;
     /**
      * @description (OPTIONAL) Get player width in pixels.
      * NOTE: if not supported the function must be undefined.
@@ -321,7 +321,7 @@ export interface PlayerAdaptorApi {
      * Below it is defined only for purposes of API documentation.
      * @returns {number | string} if string, may contain 'px'
      */
-    width?: () => number | string;
+    width?(): number | string;
 
     /**
      * @description (OPTIONAL) Get player height in pixels.
@@ -330,7 +330,7 @@ export interface PlayerAdaptorApi {
      * Below it is defined only for purposes of API documentation.
      * @returns {number | string} if string, may contain 'px'
      */
-    height?: () => number | string;
+    height?(): number | string;
 
     /**
      * @description (OPTIONAL) Get the ration of width / height of the video frame itself.
@@ -339,7 +339,7 @@ export interface PlayerAdaptorApi {
      * depends on the video frame size and not on the player element size, for example this is the
      * case in Vimeo player.
      */
-    videoRatio?: () => number | null;
+    videoRatio?(): number | null;
 
     /**
      * @description (OPTIONAL) Get player controls hidden state.
@@ -348,7 +348,7 @@ export interface PlayerAdaptorApi {
      * Below it is defined only for purposes of API documentation.
      * @returns {boolean}
      */
-    controlsHidden?: () => boolean;
+    controlsHidden?(): boolean;
 
     /**
      * @description (OPTIONAL) Get player controls height in pixels.
@@ -358,7 +358,7 @@ export interface PlayerAdaptorApi {
      * Below it is defined only for purposes of API documentation.
      * @returns {number | string} if string, may contain 'px'
      */
-    controlsHeight?: () => number | string;
+    controlsHeight?(): number | string;
 
     /**
      * @description (OPTIONAL) Get player player controls track left margin in pixels.
@@ -368,7 +368,7 @@ export interface PlayerAdaptorApi {
      * Below it is defined only for purposes of API documentation.
      * @returns {number | string} if string, may contain 'px'
      */
-    trackMarginLeft?: () => number | string;
+    trackMarginLeft?(): number | string;
 
     /**
      * @description (OPTIONAL) Get player player controls track right margin in pixels.
@@ -378,7 +378,7 @@ export interface PlayerAdaptorApi {
      * Below it is defined only for purposes of API documentation.
      * @returns {number | string} if string, may contain 'px'
      */
-    trackMarginRight?: () => number | string;
+    trackMarginRight?(): number | string;
 
 // Events - callbacks to be called when certain events take place.
 // No need to support multiple registrations for same event.
@@ -392,26 +392,26 @@ export interface PlayerAdaptorApi {
      * If your player does not support this event, simulate it by calling the cb manually.
      * @param cb{PlayerEventCallback}
      */
-    onReady: (cb: PlayerEventCallback) => void;
+    onReady(cb: PlayerEventCallback): void;
 
     /**
      * @description cb should be called when the media is played.
      * @param cb{PlayerEventCallback}
      */
-    onPlay: (cb: PlayerEventCallback) => void;
+    onPlay(cb: PlayerEventCallback): void;
 
     /**
      * @description cb should be called when the media is paused.
      * @param cb{PlayerEventCallback}
      */
-    onPause: (cb: PlayerEventCallback) => void;
+    onPause(cb: PlayerEventCallback): void;
 
     /**
      * @description cb should be called when the media is seeked
      * (playback position changes after seeking).
      * @param cb{PlayerEventCallback}
      */
-    onSeek: (cb: PlayerEventCallback) => void;
+    onSeek(cb: PlayerEventCallback): void;
 
     /**
      * @description cb should be called when the media playback current time is updated.
@@ -419,13 +419,13 @@ export interface PlayerAdaptorApi {
      * can be frequent. 200 msec is a good choice for period.
      * @param cb{PlayerEventCallback}
      */
-    onTimeUpdate: (cb: PlayerEventCallback) => void;
+    onTimeUpdate(cb: PlayerEventCallback): void;
 
     /**
      * @description cb should be called when the media source changes.
      * @param cb{PlayerEventCallback}
      */
-    onMediaChange: (cb: PlayerEventCallback) => void;
+    onMediaChange(cb: PlayerEventCallback): void;
 
     /**
      * @description (OPTIONAL) cb should be called when full screen state of the player changes.
@@ -434,7 +434,7 @@ export interface PlayerAdaptorApi {
      * @param cb{(isFullScreen?: boolean) => void} the callback may pass
      * non mandatory new full screen state as boolean.
      */
-    onFullScreen?: (cb: (isFullScreen?: boolean) => void) => void;
+    onFullScreen?(cb: (isFullScreen?: boolean) => void): void;
 
     /**
      * @description (OPTIONAL) cb should be called when player size changes.
@@ -442,7 +442,7 @@ export interface PlayerAdaptorApi {
      * Annoto will use other methods to detect size change.
      * @param cb{PlayerEventCallback}
      */
-    onSizeChange?: (cb: PlayerEventCallback) => void;
+    onSizeChange?(cb: PlayerEventCallback): void;
 
     /**
      * @description (OPTIONAL) cb should be called when player controls are shown.
@@ -453,7 +453,7 @@ export interface PlayerAdaptorApi {
      * Annoto will use other methods to detect controls state.
      * @param cb{function}
      */
-    onControlsShow?: (cb: PlayerEventCallback) => void;
+    onControlsShow?(cb: PlayerEventCallback): void;
 
     /**
      * @description (OPTIONAL) cb should be called when player controls are hidden.
@@ -464,7 +464,7 @@ export interface PlayerAdaptorApi {
      * Annoto will use other methods to detect controls state.
      * @param cb{PlayerEventCallback}
      */
-    onControlsHide?: (cb: PlayerEventCallback) => void;
+    onControlsHide?(cb: PlayerEventCallback): void;
 
     /**
      * @description (OPTIONAL) cb should be called when mouse enters player controls.
@@ -477,7 +477,7 @@ export interface PlayerAdaptorApi {
      * other players Annoto can detect the event by itself.
      * @param cb{PlayerEventCallback}
      */
-    onControlsEnter?: (cb: PlayerEventCallback) => void;
+    onControlsEnter?(cb: PlayerEventCallback): void;
 
     /**
      * @description (OPTIONAL) cb should be called when mouse leaves player controls.
@@ -490,14 +490,14 @@ export interface PlayerAdaptorApi {
      * other players Annoto can detect the event by itself.
      * @param cb{PlayerEventCallback}
      */
-    onControlsLeave?: (cb: PlayerEventCallback) => void;
+    onControlsLeave?(cb: PlayerEventCallback): void;
 
     /**
      * @description (OPTIONAL) cb should be called when an error occurred
      * during the loading of the media.
      * @param cb{(err?: Error) => void}
      */
-    onError?: (cb: (err?: Error) => void) => void;
+    onError?(cb: (err?: Error) => void): void;
 
     /**
      * @description (OPTIONAL) cb should be called when
@@ -505,5 +505,5 @@ export interface PlayerAdaptorApi {
      * Useful for dynamic websites.
      * @param cb{PlayerEventCallback}
      */
-    onRemove?: (cb: PlayerEventCallback) => void;
+    onRemove?(cb: PlayerEventCallback): void;
 }

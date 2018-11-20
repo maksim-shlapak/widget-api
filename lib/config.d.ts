@@ -37,8 +37,8 @@ export interface PlayerConfig {
     api?: PlayerAdaptorApi;
     wide?: boolean;
     params?: any;
-    mediaSrc?: () => string; // for setting the player media source.
-    mediaDetails?: (details?: MediaDetails) => MediaDetails | Promise<MediaDetails>;
+    mediaSrc?(): string; // for setting the player media source.
+    mediaDetails?(details?: MediaDetails): MediaDetails | Promise<MediaDetails>;
 }
 
 export interface TimelineConfig {
