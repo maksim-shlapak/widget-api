@@ -1,3 +1,7 @@
+/**
+ * @module annotoConfig
+ */
+
 interface Thumbnails {
     default: string;
     mobile?: string;

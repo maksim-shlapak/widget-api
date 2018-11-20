@@ -1,3 +1,6 @@
+/**
+ * @module annoto
+ */
 
 interface ContentCountersBase {
     rootCount?: number;

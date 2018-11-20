@@ -1,3 +1,7 @@
+/**
+ * @module annotoConfig
+ */
+
 import { PlayerAdaptorApi } from './player-adaptor';
 import { MediaDetails } from './media-details';
 

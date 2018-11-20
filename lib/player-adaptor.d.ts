@@ -1,3 +1,7 @@
+/**
+ * @module playerAdaptor
+ */
+
 import { MediaDetails } from "./media-details";
 
 export interface ControlsDescriptorTrack {

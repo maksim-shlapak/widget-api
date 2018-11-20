@@ -1,3 +1,7 @@
+/**
+ * @module annoto
+ */
+
 import { AnnotoConfig } from './config';
 import { DeviceDetectorApi } from './device-detector';
 import { AnnotoMetadata } from './metadata';
