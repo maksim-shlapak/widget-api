@@ -6,20 +6,15 @@
 
 **PlayerAdaptorApi**
 
-# Properties
+# Methods
 
 <a id="autoplay"></a>
 
 ##  autoplay
 
-**● autoplay**: *`function`*
+▸ **autoplay**():  `boolean` &#124; `Promise`<`boolean`>
 
 *__description__*: Get player autoplay configuration option (if player configured to play on page load) If such an option is not supported, return false.
-
-*__returns__*: 
-
-#### Type declaration
-▸():  `boolean` &#124; `Promise`<`boolean`>
 
 **Returns:**  `boolean` &#124; `Promise`<`boolean`>
 
@@ -28,30 +23,21 @@ ___
 
 ##  controlsDescriptor
 
-**● controlsDescriptor**: *`function`*
+▸ **controlsDescriptor**(): [ControlsDescriptor](playeradaptor.controlsdescriptor.md)
 
 *__description__*: Get player controls description parameters. The parameters describe behavior of the player controls.
 
-*__returns__*: controls descriptor object
-
-#### Type declaration
-▸(): [ControlsDescriptor](playeradaptor.controlsdescriptor.md)
-
 **Returns:** [ControlsDescriptor](playeradaptor.controlsdescriptor.md)
+controls descriptor object
 
 ___
 <a id="controlselement"></a>
 
 ## `<Optional>` controlsElement
 
-**● controlsElement**: *`function`*
+▸ **controlsElement**(): `Element`
 
 *__description__*: (OPTIONAL) Get player controls Element of type DIV for embedding annoto timeline for overlay and full screen mode. NOTE: if not supported the function must be undefined.
-
-*__returns__*: 
-
-#### Type declaration
-▸(): `Element`
 
 **Returns:** `Element`
 
@@ -60,30 +46,22 @@ ___
 
 ## `<Optional>` controlsHeight
 
-**● controlsHeight**: *`function`*
+▸ **controlsHeight**():  `number` &#124; `string`
 
 *__description__*: (OPTIONAL) Get player controls height in pixels. If supported it will be used instead of controlsDescriptor values. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player. Below it is defined only for purposes of API documentation.
 
-*__returns__*: if string, may contain 'px'
-
-#### Type declaration
-▸():  `number` &#124; `string`
-
 **Returns:**  `number` &#124; `string`
+
+if string, may contain 'px'
 
 ___
 <a id="controlshidden"></a>
 
 ## `<Optional>` controlsHidden
 
-**● controlsHidden**: *`function`*
+▸ **controlsHidden**(): `boolean`
 
 *__description__*: (OPTIONAL) Get player controls hidden state. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect controls state. Below it is defined only for purposes of API documentation.
-
-*__returns__*: 
-
-#### Type declaration
-▸(): `boolean`
 
 **Returns:** `boolean`
 
@@ -92,46 +70,35 @@ ___
 
 ##  currentTime
 
-**● currentTime**: *`function`*
+▸ **currentTime**():  `number` &#124; `Promise`<`number`>
 
 *__description__*: Get time of current playback position.
 
-*__returns__*: *   in seconds. Preferred Floating point precision.
-
-#### Type declaration
-▸():  `number` &#124; `Promise`<`number`>
-
 **Returns:**  `number` &#124; `Promise`<`number`>
+
+- in seconds. Preferred Floating point precision.
 
 ___
 <a id="duration"></a>
 
 ##  duration
 
-**● duration**: *`function`*
+▸ **duration**():  `number` &#124; `Promise`<`number`>
 
 *__description__*: Get the total media track duration in seconds 0 or NaN or 'undefined' values may be returned until media is ready. Note: For live video for best experience return the latest known duration of the stream. (for DVR enabled live stream, it can defer from currentTime)
 
-*__returns__*: *   in seconds
-
-#### Type declaration
-▸():  `number` &#124; `Promise`<`number`>
-
 **Returns:**  `number` &#124; `Promise`<`number`>
+
+- in seconds
 
 ___
 <a id="embeddableelement"></a>
 
 ## `<Optional>` embeddableElement
 
-**● embeddableElement**: *`function`*
+▸ **embeddableElement**(): `Element`
 
 *__description__*: (OPTIONAL) Get player Element of type DIV for embedding annoto application for full screen state. NOTE: if not supported the function must be undefined.
-
-*__returns__*: 
-
-#### Type declaration
-▸(): `Element`
 
 **Returns:** `Element`
 
@@ -140,14 +107,9 @@ ___
 
 ## `<Optional>` fixFullScreen
 
-**● fixFullScreen**: *`function`*
+▸ **fixFullScreen**(): `boolean`
 
 *__description__*: (OPTIONAL) By default Annoto will try applying a fix To enable Annoto to work when player enters Full screen. The fix is moving annoto-app container as a child of the player element or embeddableElement() annoto-app will be moved only if it the player element allows it (is DIV). annoto-app will be moved when player enters full screen, and moved back to the original parent of annoto-app obtained at Annoto.boot() call. NOTE: In rare case when this must be disabled, return false from the function. NOTE: if not required/supported the function must be undefined.
-
-*__returns__*: 
-
-#### Type declaration
-▸(): `boolean`
 
 **Returns:** `boolean`
 
@@ -156,14 +118,9 @@ ___
 
 ## `<Optional>` fullScreen
 
-**● fullScreen**: *`function`*
+▸ **fullScreen**(): `boolean`
 
 *__description__*: (OPTIONAL) Get player full screen state. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect full screen. Below it is defined only for purposes of API documentation.
-
-*__returns__*: 
-
-#### Type declaration
-▸(): `boolean`
 
 **Returns:** `boolean`
 
@@ -172,41 +129,29 @@ ___
 
 ## `<Optional>` height
 
-**● height**: *`function`*
+▸ **height**():  `number` &#124; `string`
 
 *__description__*: (OPTIONAL) Get player height in pixels. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player. Below it is defined only for purposes of API documentation.
 
-*__returns__*: if string, may contain 'px'
-
-#### Type declaration
-▸():  `number` &#124; `string`
-
 **Returns:**  `number` &#124; `string`
+
+if string, may contain 'px'
 
 ___
 <a id="init"></a>
 
 ##  init
 
-**● init**: *`function`*
+▸ **init**(element: *`Element`*, params: *`any`*):  `boolean` &#124; `Promise`<`boolean`>
 
 *__description__*: This method is called by Annoto as the first method. Use it to configure the player interface object. If the method returns false, Annoto will retry a number of times with fixed period of time between the retries. This is useful if your player needs to load some resources, or wait for some condition. Notice: For Advanced use cases, the method can return a Promise. If a Promise is returned, No retries shall be performed. Annoto will wait for Promise resolve/reject.
 
-*__param__*: html DOM element of the player (as configured by Annoto API)
-
-*__param__*: player.params of API configuration
-
-*__returns__*: 
-
-#### Type declaration
-▸(element: *`Element`*, params: *`any`*):  `boolean` &#124; `Promise`<`boolean`>
-
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| element | `Element` |
-| params | `any` |
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| element | `Element` |  html DOM element of the player (as configured by Annoto API) |
+| params | `any` |  player.params of API configuration |
 
 **Returns:**  `boolean` &#124; `Promise`<`boolean`>
 
@@ -215,14 +160,9 @@ ___
 
 ## `<Optional>` isLive
 
-**● isLive**: *`function`*
+▸ **isLive**():  `boolean` &#124; `Promise`<`boolean`>
 
 *__description__*: (OPTIONAL) Return if the media is a live stream or a VOD. NOTE: if the method is not implemented VOD is assumed.
-
-*__returns__*: 
-
-#### Type declaration
-▸():  `boolean` &#124; `Promise`<`boolean`>
 
 **Returns:**  `boolean` &#124; `Promise`<`boolean`>
 
@@ -231,14 +171,9 @@ ___
 
 ## `<Optional>` mediaMetadata
 
-**● mediaMetadata**: *`function`*
+▸ **mediaMetadata**():  [MediaDetails](annotoconfig.mediadetails.md) &#124; `Promise`<[MediaDetails](annotoconfig.mediadetails.md)>
 
 *__description__*: (OPTIONAL) Get Details for the media.
-
-*__returns__*: 
-
-#### Type declaration
-▸():  [MediaDetails](annotoconfig.mediadetails.md) &#124; `Promise`<[MediaDetails](annotoconfig.mediadetails.md)>
 
 **Returns:**  [MediaDetails](annotoconfig.mediadetails.md) &#124; `Promise`<[MediaDetails](annotoconfig.mediadetails.md)>
 
@@ -247,14 +182,9 @@ ___
 
 ##  mediaSrc
 
-**● mediaSrc**: *`function`*
+▸ **mediaSrc**():  `string` &#124; `Promise`<`string`>
 
 *__description__*: Get full URL of the currently played media source.
-
-*__returns__*: 
-
-#### Type declaration
-▸():  `string` &#124; `Promise`<`string`>
 
 **Returns:**  `string` &#124; `Promise`<`string`>
 
@@ -263,14 +193,9 @@ ___
 
 ## `<Optional>` onControlsEnter
 
-**● onControlsEnter**: *`function`*
+▸ **onControlsEnter**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: (OPTIONAL) cb should be called when mouse enters player controls. If implemented the onControlsLeave() method must be implemented as well. NOTE: In most cases this event is not required. NOTE: if not supported the function must be undefined. If defined the main usage of this event is to hide Annoto Timeline when user hovers mouse over the players controls, for example for players where Annoto Timeline interfers with some hover functionality of the player. The function is required only for Iframe players for other players Annoto can detect the event by itself.
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -285,14 +210,9 @@ ___
 
 ## `<Optional>` onControlsHide
 
-**● onControlsHide**: *`function`*
+▸ **onControlsHide**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: (OPTIONAL) cb should be called when player controls are hidden. If implemented the onControlsShow() method must be implemented as well. If implemented those events will be used instead of mouse tracking and controlsDescriptor.mouse parameters. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect controls state.
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -307,14 +227,9 @@ ___
 
 ## `<Optional>` onControlsLeave
 
-**● onControlsLeave**: *`function`*
+▸ **onControlsLeave**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: (OPTIONAL) cb should be called when mouse leaves player controls. If implemented the onControlsEnter() method must be implemented as well. NOTE: In most cases this event is not required. NOTE: if not supported the function must be undefined. If defined the main usage of this event is to hide Annoto Timeline when user hovers mouse over the players controls, for example for players where Annoto Timeline interfers with some hover functionality of the player. The function is required only for Iframe players for other players Annoto can detect the event by itself.
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -329,14 +244,9 @@ ___
 
 ## `<Optional>` onControlsShow
 
-**● onControlsShow**: *`function`*
+▸ **onControlsShow**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: (OPTIONAL) cb should be called when player controls are shown. If implemented the onControlsHide() method must be implemented as well. If implemented those events will be used instead of mouse tracking and controlsDescriptor.mouse parameters. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect controls state.
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -351,14 +261,9 @@ ___
 
 ## `<Optional>` onError
 
-**● onError**: *`function`*
+▸ **onError**(cb: *`function`*): `void`
 
 *__description__*: (OPTIONAL) cb should be called when an error occurred during the loading of the media.
-
-*__param__*: Error) => void}
-
-#### Type declaration
-▸(cb: *`function`*): `void`
 
 **Parameters:**
 
@@ -373,14 +278,9 @@ ___
 
 ## `<Optional>` onFullScreen
 
-**● onFullScreen**: *`function`*
+▸ **onFullScreen**(cb: *`function`*): `void`
 
 *__description__*: (OPTIONAL) cb should be called when full screen state of the player changes. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect full screen.
-
-*__param__*: boolean) => void} the callback may pass non mandatory new full screen state as boolean.
-
-#### Type declaration
-▸(cb: *`function`*): `void`
 
 **Parameters:**
 
@@ -395,14 +295,9 @@ ___
 
 ##  onMediaChange
 
-**● onMediaChange**: *`function`*
+▸ **onMediaChange**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: cb should be called when the media source changes.
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -417,14 +312,9 @@ ___
 
 ##  onPause
 
-**● onPause**: *`function`*
+▸ **onPause**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: cb should be called when the media is paused.
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -439,14 +329,9 @@ ___
 
 ##  onPlay
 
-**● onPlay**: *`function`*
+▸ **onPlay**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: cb should be called when the media is played.
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -461,14 +346,9 @@ ___
 
 ##  onReady
 
-**● onReady**: *`function`*
+▸ **onReady**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: cb should be called when the player is setup and the media metadata is loaded. This method must be called as the first event. If your player does not support this event, simulate it by calling the cb manually.
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -483,14 +363,9 @@ ___
 
 ## `<Optional>` onRemove
 
-**● onRemove**: *`function`*
+▸ **onRemove**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: (OPTIONAL) cb should be called when the media element/player is taken off of a page. Useful for dynamic websites.
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -505,14 +380,9 @@ ___
 
 ##  onSeek
 
-**● onSeek**: *`function`*
+▸ **onSeek**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: cb should be called when the media is seeked (playback position changes after seeking).
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -527,14 +397,9 @@ ___
 
 ## `<Optional>` onSizeChange
 
-**● onSizeChange**: *`function`*
+▸ **onSizeChange**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: (OPTIONAL) cb should be called when player size changes. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect size change.
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -549,14 +414,9 @@ ___
 
 ##  onTimeUpdate
 
-**● onTimeUpdate**: *`function`*
+▸ **onTimeUpdate**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 *__description__*: cb should be called when the media playback current time is updated. Or when the media duration is changed. can be frequent. 200 msec is a good choice for period.
-
-*__param__*: 
-
-#### Type declaration
-▸(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
 **Parameters:**
 
@@ -571,12 +431,9 @@ ___
 
 ##  pause
 
-**● pause**: *`function`*
+▸ **pause**():  `void` &#124; `Promise`<`void`>
 
 *__description__*: Pause the media
-
-#### Type declaration
-▸():  `void` &#124; `Promise`<`void`>
 
 **Returns:**  `void` &#124; `Promise`<`void`>
 
@@ -585,28 +442,22 @@ ___
 
 ##  paused
 
-**● paused**: *`function`*
+▸ **paused**():  `boolean` &#124; `Promise`<`boolean`>
 
 *__description__*: Get player playback state (playing or paused)
 
-*__returns__*: *   true if pause, false if playing
-
-#### Type declaration
-▸():  `boolean` &#124; `Promise`<`boolean`>
-
 **Returns:**  `boolean` &#124; `Promise`<`boolean`>
+
+- true if pause, false if playing
 
 ___
 <a id="play"></a>
 
 ##  play
 
-**● play**: *`function`*
+▸ **play**():  `void` &#124; `Promise`<`void`>
 
 *__description__*: Start playing the media
-
-#### Type declaration
-▸():  `void` &#124; `Promise`<`void`>
 
 **Returns:**  `void` &#124; `Promise`<`void`>
 
@@ -615,12 +466,9 @@ ___
 
 ## `<Optional>` remove
 
-**● remove**: *`function`*
+▸ **remove**():  `void` &#124; `Promise`<`void`>
 
 *__description__*: (OPTIONAL) called by Annoto to release resources when the widget is closing. NOTICE: Although optional this method is highly recommended if you use Annoto API to dynamically load and close the widget. The adaptor implementation should discard the events that were regsitered using the onReady, onPlay, etc. when remove() is called.
-
-#### Type declaration
-▸():  `void` &#124; `Promise`<`void`>
 
 **Returns:**  `void` &#124; `Promise`<`void`>
 
@@ -629,20 +477,15 @@ ___
 
 ##  setCurrentTime
 
-**● setCurrentTime**: *`function`*
+▸ **setCurrentTime**(time: *`number`*):  `void` &#124; `Promise`<`void`>
 
 *__description__*: Set the media current time of track (skip/seek to time of the track)
 
-*__param__*: in seconds
-
-#### Type declaration
-▸(time: *`number`*):  `void` &#124; `Promise`<`void`>
-
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| time | `number` |
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| time | `number` |  in seconds |
 
 **Returns:**  `void` &#124; `Promise`<`void`>
 
@@ -651,55 +494,42 @@ ___
 
 ## `<Optional>` trackMarginLeft
 
-**● trackMarginLeft**: *`function`*
+▸ **trackMarginLeft**():  `number` &#124; `string`
 
 *__description__*: (OPTIONAL) Get player player controls track left margin in pixels. If supported it will be used instead of controlsDescriptor values. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player. Below it is defined only for purposes of API documentation.
 
-*__returns__*: if string, may contain 'px'
-
-#### Type declaration
-▸():  `number` &#124; `string`
-
 **Returns:**  `number` &#124; `string`
+
+if string, may contain 'px'
 
 ___
 <a id="trackmarginright"></a>
 
 ## `<Optional>` trackMarginRight
 
-**● trackMarginRight**: *`function`*
+▸ **trackMarginRight**():  `number` &#124; `string`
 
 *__description__*: (OPTIONAL) Get player player controls track right margin in pixels. If supported it will be used instead of controlsDescriptor values. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player. Below it is defined only for purposes of API documentation.
 
-*__returns__*: if string, may contain 'px'
-
-#### Type declaration
-▸():  `number` &#124; `string`
-
 **Returns:**  `number` &#124; `string`
+
+if string, may contain 'px'
 
 ___
 <a id="updatecontrolsdescriptor"></a>
 
 ## `<Optional>` updateControlsDescriptor
 
-**● updateControlsDescriptor**: *`function`*
+▸ **updateControlsDescriptor**(isPhone: *`boolean`*, isFullScreen: *`boolean`*): `void`
 
 *__description__*: (OPTIONAL) If defined will be called at view refreshes of the widget. Allows the player to perform optional adjustments to the controls descriptor. NOTE: may be called frequently, so no heavy operations should be performed.
 
-*__param__*: 
-
-*__param__*: 
-
-#### Type declaration
-▸(isPhone: *`boolean`*, isFullScreen: *`boolean`*): `void`
-
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| isPhone | `boolean` |
-| isFullScreen | `boolean` |
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| isPhone | `boolean` |  \- |
+| isFullScreen | `boolean` |   |
 
 **Returns:** `void`
 
@@ -708,12 +538,9 @@ ___
 
 ## `<Optional>` videoRatio
 
-**● videoRatio**: *`function`*
+▸ **videoRatio**():  `number` &#124; `null`
 
 *__description__*: (OPTIONAL) Get the ration of width / height of the video frame itself. Note: the ratio shold be of the video frame, not of the player element (it can be differnt). Note: In most cases this method is not required. It is required only if the controls size depends on the video frame size and not on the player element size, for example this is the case in Vimeo player.
-
-#### Type declaration
-▸():  `number` &#124; `null`
 
 **Returns:**  `number` &#124; `null`
 
@@ -722,16 +549,13 @@ ___
 
 ## `<Optional>` width
 
-**● width**: *`function`*
+▸ **width**():  `number` &#124; `string`
 
 *__description__*: (OPTIONAL) Get player width in pixels. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect width of the player. Below it is defined only for purposes of API documentation.
 
-*__returns__*: if string, may contain 'px'
-
-#### Type declaration
-▸():  `number` &#124; `string`
-
 **Returns:**  `number` &#124; `string`
+
+if string, may contain 'px'
 
 ___
 

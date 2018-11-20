@@ -4,16 +4,13 @@
 
 **OriginProvider**
 
-# Properties
+# Methods
 
 <a id="getmediadeeplinkurl"></a>
 
 ## `<Optional>` getMediaDeepLinkUrl
 
-**● getMediaDeepLinkUrl**: *`function`*
-
-#### Type declaration
-▸(currentTime: *`number`*, mediaSrc: *`string`*): `string`
+▸ **getMediaDeepLinkUrl**(currentTime: *`number`*, mediaSrc: *`string`*): `string`
 
 **Parameters:**
 
@@ -29,10 +26,7 @@ ___
 
 ##  getPageUrl
 
-**● getPageUrl**: *`function`*
-
-#### Type declaration
-▸(): `string`
+▸ **getPageUrl**(): `string`
 
 **Returns:** `string`
 

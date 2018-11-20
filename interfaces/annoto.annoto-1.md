@@ -4,16 +4,13 @@
 
 **Annoto**
 
-# Properties
+# Methods
 
 <a id="boot"></a>
 
 ##  boot
 
-**● boot**: *`function`*
-
-#### Type declaration
-▸(config: *[AnnotoConfig](annotoconfig.annotoconfig-1.md)*): `void`
+▸ **boot**(config: *[AnnotoConfig](annotoconfig.annotoconfig-1.md)*): `void`
 
 **Parameters:**
 
@@ -28,10 +25,7 @@ ___
 
 ##  on
 
-**● on**: *`function`*
-
-#### Type declaration
-▸(event: *[AnnotoEventType](../modules/annoto.md#annotoeventtype)*, cb: * [AnnotoReadyCallback](../modules/annoto.md#annotoreadycallback) &#124; [AnnotoMetadataCallback](../modules/annoto.md#annotometadatacallback) &#124; [AnnotoUxEventCallback](../modules/annoto.md#annotouxeventcallback)*): `void`
+▸ **on**(event: *[AnnotoEventType](../modules/annoto.md#annotoeventtype)*, cb: * [AnnotoReadyCallback](../modules/annoto.md#annotoreadycallback) &#124; [AnnotoMetadataCallback](../modules/annoto.md#annotometadatacallback) &#124; [AnnotoUxEventCallback](../modules/annoto.md#annotouxeventcallback)*): `void`
 
 **Parameters:**
 

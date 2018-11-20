@@ -4,16 +4,13 @@
 
 **DeviceDetectorApi**
 
-# Properties
+# Methods
 
 <a id="isdesktop"></a>
 
 ##  isDesktop
 
-**● isDesktop**: *`function`*
-
-#### Type declaration
-▸(): `boolean`
+▸ **isDesktop**(): `boolean`
 
 **Returns:** `boolean`
 
@@ -22,10 +19,7 @@ ___
 
 ## `<Optional>` isLandscape
 
-**● isLandscape**: *`function`*
-
-#### Type declaration
-▸(): `boolean`
+▸ **isLandscape**(): `boolean`
 
 **Returns:** `boolean`
 
@@ -34,10 +28,7 @@ ___
 
 ##  isPhone
 
-**● isPhone**: *`function`*
-
-#### Type declaration
-▸(): `boolean`
+▸ **isPhone**(): `boolean`
 
 **Returns:** `boolean`
 
@@ -46,10 +37,7 @@ ___
 
 ##  isSmallScreen
 
-**● isSmallScreen**: *`function`*
-
-#### Type declaration
-▸(): `boolean`
+▸ **isSmallScreen**(): `boolean`
 
 **Returns:** `boolean`
 
@@ -58,10 +46,7 @@ ___
 
 ##  isTablet
 
-**● isTablet**: *`function`*
-
-#### Type declaration
-▸(): `boolean`
+▸ **isTablet**(): `boolean`
 
 **Returns:** `boolean`
 

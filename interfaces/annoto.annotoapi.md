@@ -4,16 +4,13 @@
 
 **AnnotoApi**
 
-# Properties
+# Methods
 
 <a id="auth"></a>
 
 ##  auth
 
-**● auth**: *`function`*
-
-#### Type declaration
-▸(token: *`string`*, cb?: *`function`*): `Promise`<`void`>
+▸ **auth**(token: *`string`*, cb?: *`function`*): `Promise`<`void`>
 
 **Parameters:**
 
@@ -29,10 +26,7 @@ ___
 
 ##  close
 
-**● close**: *`function`*
-
-#### Type declaration
-▸(index?: *`number`*, cb?: *`function`*): `Promise`<`void`>
+▸ **close**(index?: *`number`*, cb?: *`function`*): `Promise`<`void`>
 
 **Parameters:**
 
@@ -44,14 +38,20 @@ ___
 **Returns:** `Promise`<`void`>
 
 ___
+<a id="getmetadata"></a>
+
+##  getMetadata
+
+▸ **getMetadata**(): [AnnotoMetadata](annoto.annotometadata.md)
+
+**Returns:** [AnnotoMetadata](annoto.annotometadata.md)
+
+___
 <a id="hide"></a>
 
 ##  hide
 
-**● hide**: *`function`*
-
-#### Type declaration
-▸(cb?: *`function`*): `Promise`<`void`>
+▸ **hide**(cb?: *`function`*): `Promise`<`void`>
 
 **Parameters:**
 
@@ -66,10 +66,7 @@ ___
 
 ##  load
 
-**● load**: *`function`*
-
-#### Type declaration
-▸(config: *[AnnotoConfig](annotoconfig.annotoconfig-1.md)*, cb?: *`function`*): `Promise`<`void`>
+▸ **load**(config: *[AnnotoConfig](annotoconfig.annotoconfig-1.md)*, cb?: *`function`*): `Promise`<`void`>
 
 **Parameters:**
 
@@ -85,10 +82,7 @@ ___
 
 ##  logout
 
-**● logout**: *`function`*
-
-#### Type declaration
-▸(cb?: *`function`*): `Promise`<`void`>
+▸ **logout**(cb?: *`function`*): `Promise`<`void`>
 
 **Parameters:**
 
@@ -103,10 +97,7 @@ ___
 
 ##  registerDeviceDetector
 
-**● registerDeviceDetector**: *`function`*
-
-#### Type declaration
-▸(detector: *[DeviceDetectorApi](annoto.devicedetectorapi.md)*, cb?: *`function`*): `Promise`<`void`>
+▸ **registerDeviceDetector**(detector: *[DeviceDetectorApi](annoto.devicedetectorapi.md)*, cb?: *`function`*): `Promise`<`void`>
 
 **Parameters:**
 
@@ -122,10 +113,7 @@ ___
 
 ##  registerOriginProvider
 
-**● registerOriginProvider**: *`function`*
-
-#### Type declaration
-▸(provider: *[OriginProvider](annoto.originprovider.md)*, cb?: *`function`*): `Promise`<`void`>
+▸ **registerOriginProvider**(provider: *[OriginProvider](annoto.originprovider.md)*, cb?: *`function`*): `Promise`<`void`>
 
 **Parameters:**
 
@@ -141,10 +129,7 @@ ___
 
 ##  show
 
-**● show**: *`function`*
-
-#### Type declaration
-▸(cb?: *`function`*): `Promise`<`void`>
+▸ **show**(cb?: *`function`*): `Promise`<`void`>
 
 **Parameters:**
 
@@ -153,18 +138,6 @@ ___
 | `Optional` cb | `function` |
 
 **Returns:** `Promise`<`void`>
-
-___
-
-# Methods
-
-<a id="getmetadata"></a>
-
-##  getMetadata
-
-▸ **getMetadata**(): [AnnotoMetadata](annoto.annotometadata.md)
-
-**Returns:** [AnnotoMetadata](annoto.annotometadata.md)
 
 ___
 

@@ -20,22 +20,6 @@ ___
 **● draggableDisabled**: *`boolean`*
 
 ___
-<a id="logoutrequesthandle"></a>
-
-## `<Optional>` logoutRequestHandle
-
-**● logoutRequestHandle**: *`function`*
-
-*__description__*: If Provided, Will be called when user triggers Logout action.
-
-*__returns__*: If possible the promise should reslove/reject when the logout flow is finished.
-
-#### Type declaration
-▸(): `Promise`<`void`>
-
-**Returns:** `Promise`<`void`>
-
-___
 <a id="pausetriggers"></a>
 
 ## `<Optional>` pauseTriggers
@@ -69,20 +53,31 @@ ___
 2.  Will not be draggable. // false by default.
 
 ___
+
+# Methods
+
+<a id="logoutrequesthandle"></a>
+
+## `<Optional>` logoutRequestHandle
+
+▸ **logoutRequestHandle**(): `Promise`<`void`>
+
+*__description__*: If Provided, Will be called when user triggers Logout action.
+
+**Returns:** `Promise`<`void`>
+If possible the promise should reslove/reject when the logout flow is finished.
+
+___
 <a id="ssoauthrequesthandle"></a>
 
 ## `<Optional>` ssoAuthRequestHandle
 
-**● ssoAuthRequestHandle**: *`function`*
+▸ **ssoAuthRequestHandle**(): `Promise`<`void`>
 
 *__description__*: For SSO enabled clientId only. if Provided, Will be called when user triggers Authentication. If not provided a message in the form is shown.
 
-*__returns__*: If possible the promise should reslove/reject when the auth flow is finished.
-
-#### Type declaration
-▸(): `Promise`<`void`>
-
 **Returns:** `Promise`<`void`>
+If possible the promise should reslove/reject when the auth flow is finished.
 
 ___
 
