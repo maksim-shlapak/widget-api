@@ -95,35 +95,63 @@ export interface AnnotoFeatures {
     popout?: boolean;  // Does nothing at the moment. For future use
 }
 
+/**
+ * User experience configuration
+ */
 export interface UxConfig {
-    commentsTopToBottom?: boolean; // false by default. If set to true comments start will be at the top instead of bottom
-    draggableDisabled?: boolean; // false by default.
     /**
-     * @description if set to true, the widget will behave like a side panel if open.
+     * If set to true comments start will be at the top instead of bottom.
+     * false by default.
+     */
+    commentsTopToBottom?: boolean;
+    /**
+     * if set to true widget position will be fixed and user won't be able to drag it.
+     * false by default.
+     */
+    draggableDisabled?: boolean;
+    /**
+     * if set to true, the widget will behave like a side panel if open.
      * 1. Will take full available height of the player.element / relativePositionElement.
      * 2. Will not be draggable.
      * // false by default. 
      */
     sidePanel?: boolean; 
     /**
-     * @description Triggers for automatically pause the player.
+     * Triggers that will automatically pause the player.
      * All true by default.
+     * > For live video, the player is never paused.
      */
     pauseTriggers?: {
+        /**
+         * Pause when user wants to comment, reply or add new note
+         */
         formOpen?: boolean;
+        /**
+         * Pause when user is prompted to login/signup
+         */
         authTrigger?: boolean;
+        /**
+         * On mobile when widget is open it overlays the player.
+         * Pause when widget is open on mobile devices, so the video is not played in the background.
+         * > when opening in interactive mode (kuku/mini widget that do not overlay all the video), the player will not be paused. 
+         */
         widgetOpenOnPhone?: boolean;
         cta?: boolean;
+        /**
+         * Will pause only if tapping on timeline segment that contains UGC, regular taps will not pause the video.
+         */
         timelineUgcTap?: boolean;
     };
     /**
-     * @description For SSO enabled clientId only. if Provided, Will be called when user triggers Authentication.
+     * For SSO enabled integrations only.
+     * If Provided, Will be called when user triggers Authentication.
      * If not provided a message in the form is shown.
      * @returns {Promise<void>} If possible the promise should reslove/reject when the auth flow is finished.
      */
     ssoAuthRequestHandle?(): Promise<void>;
     /**
-     * @description If Provided, Will be called when user triggers Logout action.
+     * For SSO enabled integrations only.
+     * If Provided, Will be called when user triggers Logout action and "Logout" option will appear in the drawer menu.
      * @returns {Promise<void>} If possible the promise should reslove/reject when the logout flow is finished.
      */
     logoutRequestHandle?(): Promise<void>;
@@ -138,6 +166,9 @@ export interface AnnotoConfig {
     width?: WidgetSizeConfig;
     height?: WidgetSizeConfig;
     margins?: WidgetMargins;
+    /**
+     * Configuration options that affect the user experience
+     */
     ux?: UxConfig;
     rtl?: boolean;
     locale?: string;
@@ -145,6 +176,9 @@ export interface AnnotoConfig {
     thread?: ThreadConfig;
     demoMode: boolean;
     launchSource?: LaunchSourceConfig;
+    /**
+     * Enable/disable Features
+     */
     features?: AnnotoFeatures;
     helpUrl?: string;
     zIndex?: number;
