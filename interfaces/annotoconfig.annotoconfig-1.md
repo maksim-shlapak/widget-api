@@ -33,6 +33,8 @@ ___
 
 **● features**: *[AnnotoFeatures](annotoconfig.annotofeatures.md)*
 
+Enable/disable Features
+
 ___
 <a id="fszindex"></a>
 
@@ -119,6 +121,8 @@ ___
 ## `<Optional>` ux
 
 **● ux**: *[UxConfig](annotoconfig.uxconfig.md)*
+
+Configuration options that affect the user experience
 
 ___
 <a id="widgets"></a>
