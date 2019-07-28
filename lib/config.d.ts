@@ -146,15 +146,15 @@ export interface UxConfig {
      * For SSO enabled integrations only.
      * If Provided, Will be called when user triggers Authentication.
      * If not provided a message in the form is shown.
-     * @returns {Promise<void>} If possible the promise should reslove/reject when the auth flow is finished.
+     * @returns {Promise<void> | void} If possible the promise should reslove/reject when the auth flow is finished.
      */
-    ssoAuthRequestHandle?(): Promise<void>;
+    ssoAuthRequestHandle?(): Promise<void> | void;
     /**
      * For SSO enabled integrations only.
      * If Provided, Will be called when user triggers Logout action and "Logout" option will appear in the drawer menu.
-     * @returns {Promise<void>} If possible the promise should reslove/reject when the logout flow is finished.
+     * @returns {Promise<void> | void} If possible the promise should reslove/reject when the logout flow is finished.
      */
-    logoutRequestHandle?(): Promise<void>;
+    logoutRequestHandle?(): Promise<void> | void;
 }
 
 export interface AnnotoConfig {

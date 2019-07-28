@@ -36,5 +36,3 @@ export interface Annoto {
 }
 
 export { AnnotoConfig, DeviceDetectorApi, AnnotoMetadata, MediaDetails, AnnotoUxEvent };
-
-export declare const Annoto: Annoto;
