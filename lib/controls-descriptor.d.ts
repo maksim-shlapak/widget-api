@@ -1,4 +1,8 @@
 /**
+ * @module playerAdaptor
+ */
+
+/**
  * @description The parameters describe behavior of the player controls
  * It is used as default controls parameters for correct timeline behavior in overlay
  * and in full screen mode.
