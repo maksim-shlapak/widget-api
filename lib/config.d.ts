@@ -170,8 +170,20 @@ export interface AnnotoConfig {
      * Configuration options that affect the user experience
      */
     ux?: UxConfig;
+    /**
+     * DEPRECATED
+     * the rtl direction is derrived automaticaly from the locale.
+     */
     rtl?: boolean;
+    /**
+     * Language code for the widget.
+     * Default: 'en'
+     */
     locale?: string;
+    /**
+     * Widget configuration settings.
+     * NOTE: only single widget is supported. the array is for future use.
+     */
     widgets: WidgetConfig[];
     thread?: ThreadConfig;
     demoMode: boolean;
@@ -181,6 +193,15 @@ export interface AnnotoConfig {
      */
     features?: AnnotoFeatures;
     helpUrl?: string;
+    /**
+     * The widget is position is absolute on page.
+     * Set the zIndex to appropriate value to make it visible and not iterfer with other elements.
+     * Default value: 100
+     */
     zIndex?: number;
+    /**
+     * same as zIndex, only for when the player is in fullscreen.
+     * Default value: 100
+     */
     fsZIndex?: number;
 }

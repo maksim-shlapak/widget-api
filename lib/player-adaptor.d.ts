@@ -2,173 +2,11 @@
  * @module playerAdaptor
  */
 
-import { MediaDetails } from "./media-details";
-
-export interface ControlsDescriptorTrack {
-    marginRight: number;
-    /**
-     * The space in pixels between the right edge of the player and the end of the track
-     */
-    marginLeft: number;
-    /**
-     * The space in pixels between the left edge of the player and the start of the track
-     */
-
-    maxWidth?: number;
-    /**
-     * Maximum width of the track in pixels.
-     * Not required for some of the players because the track width is 100%.
-     * If set must be set to an integer representing pixels.
-     */
-
-    widthPercentage?: number;
-    /**
-     * Width of the track in percentage of the whole screen width.
-     * Some players don't use fixed width but use
-     * percentage instead.
-     */
-}
-
-export interface ControlsDescriptorFullscreen {
-    height: number;
-    topTrack?: {
-        margins?: number;
-    };
-    /**
-     *  Set the margins for the timeline.
-     *  if Annoto configured to place the timeline at the top of
-     *  the screen when the player is in full screen.
-     */
-
-    track: ControlsDescriptorTrack;
-}
-
-export interface ControlsDescriptorMouse {
-    trackMove?: boolean;
-    /**
-     * Set to true if movement of the mouse inside player opens the controls
-     */
-    moveTimeout?: number;
-    /**
-     * Timeout in milliseconds after which the controls are hiding
-     * when mouse inside the player is not moved.
-     */
-    hideOnLeave?: boolean;
-    /**
-     * Set to true if the controls are hiding when mouse leaves the video frame
-     * (see hideDelay below).
-     */
-    showOnEnter?: boolean;
-    /**
-     * Set to true if when mouse enters the video frame the controls gets open.
-     */
-    enterTimeout?: number;
-    /**
-     * similar to moveTimeout but for mouse enter into video frame.
-     * Useful when trackMove is false
-     */
-}
-
-export interface ControlsDescriptorTransitions {
-    showTiming?: string;
-    /**
-     * Set the css timming for controls show.
-     * Default: '0s linear'
-     */
-
-
-    hideTiming?: string;
-    /**
-     * Set the css timming for controls hide.
-     * Default: '0s linear'
-     */
-}
-
-export interface ControlsDescriptorTimeline {
-    fadeInOut?: boolean;
-    /**
-     * If set to true, and hideOnHide is true as well, the timeline will fade out/in.
-     * By default it will transition up and down instead.
-     */
-}
-
-export interface ControlsDescriptorVideoRatioOffsets {
-    center?: boolean;
-    top: number;
-    left: number;
-}
-
-/**
- * @description The parameters describe behavior of the player controls
- * It is used as default controls parameters for correct timeline behavior in overlay
- * and in full screen mode.
- */
-export interface ControlsDescriptor {
-    height: number;
-    /**
-     * The height in pixels of the controls
-     */
-
-    scrubberOnInOverlay?: boolean;
-    /**
-     * if true the custom scrubber bar will be enabled in overlay.
-     * By default player controls scrubber is assumed to present in overlay and the custom scrubber is not shown.
-     */
-
-    track: ControlsDescriptorTrack;
-    /**
-     * The track is the progress timeline element of the controls
-     * not including the other controls like the play button.
-     */
-
-    fullScreen: ControlsDescriptorFullscreen;
-    /**
-     * Same parameters as above for full screen. Some players have different parameters of controls
-     * when they are in full screen.
-     */
-
-    mouse: ControlsDescriptorMouse;
-
-    /**
-     * The controls may have a transition effect for hidding and showing.
-     */
-    transitions: ControlsDescriptorTransitions;
-
-    /**
-     * Timeline behaviour
-     */
-    timeline: ControlsDescriptorTimeline;
-
-    /**
-     * The controls are dynamically closing and opening based on user mouse movement.
-     * To fit the the timeline to the state of the controls, we track mouse movement.
-     */
-
-    hideOnPlay?: boolean;
-    /**
-     * Set to true if play() action causes controls to hide
-     */
-    shownOnLoad?: boolean;
-    /**
-     * Set to true if controls are shown when the player loads
-     */
-    showDelay?: number;
-    /**
-     * Delay in milliseconds for any show controls action
-     */
-    hideDelay?: number;
-    /**
-     * Delay in milliseconds for hide action (for example after mouse leaves the video frame)
-     */
-    firstShowDelay?: number;
-    /**
-     * Similar to showDelay, but only for first show of controls. Not required for most players.
-     */
-    fixVideoRatioOffsets?: boolean;
-    videoRatioOffsets?: ControlsDescriptorVideoRatioOffsets;
-}
+import { MediaDetails } from './media-details';
+import { ControlsDescriptor } from './controls-descriptor';
 
 export type PlayerEventCallback = () => void;
+export * from './controls-descriptor';
 
 /**
  * @description Annoto Player Adaptor API
@@ -187,7 +25,7 @@ export interface PlayerAdaptorApi {
      * @param params - player.params of API configuration
      * @returns {boolean/Promise}
      */
-    init(element: Element, params: any): boolean | Promise<boolean>;
+    init(element: Element, params?: any): boolean | Promise<boolean>;
 
     /**
      * @description (OPTIONAL) called by Annoto to release resources when the widget is closing.
@@ -212,15 +50,6 @@ export interface PlayerAdaptorApi {
      * @param time - in seconds
      */
     setCurrentTime(time: number): void | Promise<void>;
-
-    /**
-     * @description (OPTIONAL) If defined will be called at view refreshes of the widget.
-     * Allows the player to perform optional adjustments to the controls descriptor.
-     * NOTE: may be called frequently, so no heavy operations should be performed.
-     * @param isPhone {boolean}
-     * @param isFullScreen {boolean}
-     */
-    updateControlsDescriptor?(isPhone: boolean, isFullScreen: boolean): void;
 
     /**
      * @description (OPTIONAL) Return if the media is a live stream or a VOD.
@@ -251,37 +80,31 @@ export interface PlayerAdaptorApi {
     paused(): boolean | Promise<boolean>;
 
     /**
-     * @description Get full URL of the currently played media source.
+     * @description Get currently played media source. The returned value, identifies
+     * the current video and must be unique. It can be a full URL or an unique identifier.
+     * Notice: this value can be overriden by player.mediaSrc widget configuration.
      * @returns {string | Promise<string>}
      */
     mediaSrc(): string | Promise<string>;
 
     /**
      * @description (OPTIONAL) Get Details for the media.
+     * Notice: this value can be overriden by player.mediaDetails widget configuration.
      * @return {MediaDetails | Promise<MediaDetails>}
      */
     mediaMetadata?(): MediaDetails | Promise<MediaDetails>;
 
     /**
-     * @description Get player autoplay configuration option
+     * @description (OPTIONAL) Get player autoplay configuration option
      * (if player configured to play on page load)
-     * If such an option is not supported, return false.
      * @returns {boolean | Promise<boolean>}
      */
-    autoplay(): boolean | Promise<boolean>;
-
-    /**
-     * @description Get player controls description parameters.
-     * The parameters describe behavior of the player controls.
-     * @returns {ControlsDescriptor} controls descriptor object
-     */
-    controlsDescriptor(): ControlsDescriptor;
+    autoplay?(): boolean | Promise<boolean>;
 
     /**
      * @description (OPTIONAL) Get player full screen state.
      * NOTE: if not supported the function must be undefined.
      * Annoto will use other methods to detect full screen.
-     * Below it is defined only for purposes of API documentation.
      * @returns {boolean}
      */
     fullScreen?(): boolean;
@@ -290,26 +113,27 @@ export interface PlayerAdaptorApi {
      * @description (OPTIONAL) By default Annoto will try applying a fix
      * To enable Annoto to work when player enters Full screen. The fix is
      * moving annoto-app container as a child of the player element or embeddableElement()
-     * annoto-app will be moved only if it the player element allows it (is DIV).
+     * annoto-app will be moved only if the player element allows it (is NOT an IFRAME).
      * annoto-app will be moved when player enters full screen, and moved back to the original
      * parent of annoto-app obtained at Annoto.boot() call.
      * NOTE: In rare case when this must be disabled, return false from the function.
-     * NOTE: if not required/supported the function must be undefined.
      * @returns {boolean}
      */
     fixFullScreen?(): boolean;
 
     /**
-     * @description (OPTIONAL) Get player controls Element of type DIV for embedding
+     * @description (OPTIONAL) Get player controls Element for embedding
      * annoto timeline for overlay and full screen mode.
+     * NOTE: Although this method is optional it's highly recomended and will make the integration
+     * much simpler, imrove performance and provide better User experience.
      * NOTE: if not supported the function must be undefined.
      * @returns {Element}
      */
     controlsElement?(): Element;
 
     /**
-     * @description (OPTIONAL) Get player Element of type DIV for embedding
-     * annoto application for full screen state.
+     * @description (OPTIONAL) Get player Element for embedding annoto application for full screen state.
+     * If not provided the main player Element would be used (the element provided at init()).
      * NOTE: if not supported the function must be undefined.
      * @returns {Element}
      */
@@ -318,7 +142,6 @@ export interface PlayerAdaptorApi {
      * @description (OPTIONAL) Get player width in pixels.
      * NOTE: if not supported the function must be undefined.
      * Annoto will use other methods to detect width of the player.
-     * Below it is defined only for purposes of API documentation.
      * @returns {number | string} if string, may contain 'px'
      */
     width?(): number | string;
@@ -327,68 +150,19 @@ export interface PlayerAdaptorApi {
      * @description (OPTIONAL) Get player height in pixels.
      * NOTE: if not supported the function must be undefined.
      * Annoto will use other methods to detect height of the player.
-     * Below it is defined only for purposes of API documentation.
      * @returns {number | string} if string, may contain 'px'
      */
     height?(): number | string;
-
-    /**
-     * @description (OPTIONAL) Get the ration of width / height of the video frame itself.
-     * Note: the ratio shold be of the video frame, not of the player element (it can be differnt).
-     * Note: In most cases this method is not required. It is required only if the controls size
-     * depends on the video frame size and not on the player element size, for example this is the
-     * case in Vimeo player.
-     */
-    videoRatio?(): number | null;
-
-    /**
-     * @description (OPTIONAL) Get player controls hidden state.
-     * NOTE: if not supported the function must be undefined.
-     * Annoto will use other methods to detect controls state.
-     * Below it is defined only for purposes of API documentation.
-     * @returns {boolean}
-     */
-    controlsHidden?(): boolean;
-
-    /**
-     * @description (OPTIONAL) Get player controls height in pixels.
-     * If supported it will be used instead of controlsDescriptor values.
-     * NOTE: if not supported the function must be undefined.
-     * Annoto will use other methods to detect height of the player.
-     * Below it is defined only for purposes of API documentation.
-     * @returns {number | string} if string, may contain 'px'
-     */
-    controlsHeight?(): number | string;
-
-    /**
-     * @description (OPTIONAL) Get player player controls track left margin in pixels.
-     * If supported it will be used instead of controlsDescriptor values.
-     * NOTE: if not supported the function must be undefined.
-     * Annoto will use other methods to detect height of the player.
-     * Below it is defined only for purposes of API documentation.
-     * @returns {number | string} if string, may contain 'px'
-     */
-    trackMarginLeft?(): number | string;
-
-    /**
-     * @description (OPTIONAL) Get player player controls track right margin in pixels.
-     * If supported it will be used instead of controlsDescriptor values.
-     * NOTE: if not supported the function must be undefined.
-     * Annoto will use other methods to detect height of the player.
-     * Below it is defined only for purposes of API documentation.
-     * @returns {number | string} if string, may contain 'px'
-     */
-    trackMarginRight?(): number | string;
 
 // Events - callbacks to be called when certain events take place.
 // No need to support multiple registrations for same event.
 // Annoto registeres on the events on Annoto.boot() and on each time annotoApi.load() is called.
 // Notice the description of the adaptor remove() method above.
-// Annoto will register to those Events after the init() call returns true.
+// Annoto will register to those Events after the init() call returns/resolves to true.
 
     /**
      * @description cb should be called when the player is setup and the media metadata is loaded.
-     * This method must be called as the first event.
+     * Note: This method MUST be called as the first event.
      * If your player does not support this event, simulate it by calling the cb manually.
      * @param cb{PlayerEventCallback}
      */
@@ -430,9 +204,8 @@ export interface PlayerAdaptorApi {
     /**
      * @description (OPTIONAL) cb should be called when full screen state of the player changes.
      * NOTE: if not supported the function must be undefined.
-     * Annoto will use other methods to detect full screen.
-     * @param cb{(isFullScreen?: boolean) => void} the callback may pass
-     * non mandatory new full screen state as boolean.
+     * Annoto will use other methods to detect full screen changes.
+     * @param cb{(isFullScreen?: boolean) => void} the callback may pass non mandatory new full screen state as boolean.
      */
     onFullScreen?(cb: (isFullScreen?: boolean) => void): void;
 
@@ -443,6 +216,71 @@ export interface PlayerAdaptorApi {
      * @param cb{PlayerEventCallback}
      */
     onSizeChange?(cb: PlayerEventCallback): void;
+
+    /**
+     * @description (OPTIONAL) cb should be called when
+     * the media element/player is taken off of a page.
+     * Useful for dynamic websites.
+     * @param cb{PlayerEventCallback}
+     */
+    onRemove?(cb: PlayerEventCallback): void;
+
+
+// Advanced Optional APIs. Below APIs are required only if the player does not support controlsElement() method, or if the player element is an IFRAME.
+// The APIs deal with providing information on the player controls, so that Annoto timeline can be of the right size and be shown and hidden according
+// to the player controls behaviour.
+// For non IFRAME players it is always best practice to implement the controlsElement() method.
+
+    /**
+     * @description (OPTIONAL) Get player controls description parameters.
+     * The parameters describe behavior of the player controls.
+     * @returns {ControlsDescriptor} controls descriptor object
+     */
+    controlsDescriptor?(): ControlsDescriptor;
+
+    /**
+     * @description (OPTIONAL) If defined will be called at view refreshes of the widget.
+     * Allows the player to perform optional adjustments to the controls descriptor.
+     * NOTE: may be called frequently, so no heavy operations should be performed.
+     * @param isPhone {boolean}
+     * @param isFullScreen {boolean}
+     */
+    updateControlsDescriptor?(isPhone: boolean, isFullScreen: boolean): void;
+
+    /**
+     * @description (OPTIONAL) Get player controls hidden state.
+     * NOTE: if not supported the function must be undefined.
+     * Annoto will use other methods to detect controls state.
+     * @returns {boolean}
+     */
+    controlsHidden?(): boolean;
+
+    /**
+     * @description (OPTIONAL) Get player controls height in pixels.
+     * If supported it will be used instead of controlsDescriptor values.
+     * NOTE: if not supported the function must be undefined.
+     * Annoto will use other methods to detect height of the player.
+     * @returns {number | string} if string, may contain 'px'
+     */
+    controlsHeight?(): number | string;
+
+    /**
+     * @description (OPTIONAL) Get player controls track (progress bar) left margin in pixels.
+     * If supported it will be used instead of controlsDescriptor values.
+     * NOTE: if not supported the function must be undefined.
+     * Annoto will use other methods to detect height of the player.
+     * @returns {number | string} if string, may contain 'px'
+     */
+    trackMarginLeft?(): number | string;
+
+    /**
+     * @description (OPTIONAL) Get player player controls track (progress bar) right margin in pixels.
+     * If supported it will be used instead of controlsDescriptor values.
+     * NOTE: if not supported the function must be undefined.
+     * Annoto will use other methods to detect height of the player.
+     * @returns {number | string} if string, may contain 'px'
+     */
+    trackMarginRight?(): number | string;
 
     /**
      * @description (OPTIONAL) cb should be called when player controls are shown.
@@ -467,7 +305,18 @@ export interface PlayerAdaptorApi {
     onControlsHide?(cb: PlayerEventCallback): void;
 
     /**
-     * @description (OPTIONAL) cb should be called when mouse enters player controls.
+     * @description (OPTIONAL) Get the ration of width / height of the video frame itself.
+     * Note: the ratio shold be of the video frame, not of the player element (it can be differnt).
+     * Note: In most cases this method is not required. It is required only if the controls size
+     * depends on the video frame size and not on the player element size, for example this is the
+     * case in Vimeo player.
+     */
+    videoRatio?(): number | null;
+
+// DEPRECATED
+
+    /**
+     * @description (DEPRECATED) cb should be called when mouse enters player controls.
      * If implemented the onControlsLeave() method must be implemented as well.
      * NOTE: In most cases this event is not required.
      * NOTE: if not supported the function must be undefined.
@@ -480,7 +329,7 @@ export interface PlayerAdaptorApi {
     onControlsEnter?(cb: PlayerEventCallback): void;
 
     /**
-     * @description (OPTIONAL) cb should be called when mouse leaves player controls.
+     * @description (DEPRECATED) cb should be called when mouse leaves player controls.
      * If implemented the onControlsEnter() method must be implemented as well.
      * NOTE: In most cases this event is not required.
      * NOTE: if not supported the function must be undefined.
@@ -491,19 +340,4 @@ export interface PlayerAdaptorApi {
      * @param cb{PlayerEventCallback}
      */
     onControlsLeave?(cb: PlayerEventCallback): void;
-
-    /**
-     * @description (OPTIONAL) cb should be called when an error occurred
-     * during the loading of the media.
-     * @param cb{(err?: Error) => void}
-     */
-    onError?(cb: (err?: Error) => void): void;
-
-    /**
-     * @description (OPTIONAL) cb should be called when
-     * the media element/player is taken off of a page.
-     * Useful for dynamic websites.
-     * @param cb{PlayerEventCallback}
-     */
-    onRemove?(cb: PlayerEventCallback): void;
 }
