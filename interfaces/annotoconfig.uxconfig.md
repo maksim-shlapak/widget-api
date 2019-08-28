@@ -78,11 +78,12 @@ ___
 
 ## `<Optional>` logoutRequestHandle
 
-▸ **logoutRequestHandle**(): `Promise`<`void`>
+▸ **logoutRequestHandle**():  `Promise`<`void`> &#124; `void`
 
 For SSO enabled integrations only. If Provided, Will be called when user triggers Logout action and "Logout" option will appear in the drawer menu.
 
-**Returns:** `Promise`<`void`>
+**Returns:**  `Promise`<`void`> &#124; `void`
+
 If possible the promise should reslove/reject when the logout flow is finished.
 
 ___
@@ -90,11 +91,12 @@ ___
 
 ## `<Optional>` ssoAuthRequestHandle
 
-▸ **ssoAuthRequestHandle**(): `Promise`<`void`>
+▸ **ssoAuthRequestHandle**():  `Promise`<`void`> &#124; `void`
 
 For SSO enabled integrations only. If Provided, Will be called when user triggers Authentication. If not provided a message in the form is shown.
 
-**Returns:** `Promise`<`void`>
+**Returns:**  `Promise`<`void`> &#124; `void`
+
 If possible the promise should reslove/reject when the auth flow is finished.
 
 ___

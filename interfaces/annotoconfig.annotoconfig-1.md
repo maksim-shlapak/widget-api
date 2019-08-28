@@ -42,6 +42,8 @@ ___
 
 **● fsZIndex**: *`number`*
 
+same as zIndex, only for when the player is in fullscreen. Default value: 100
+
 ___
 <a id="height"></a>
 
@@ -69,6 +71,8 @@ ___
 ## `<Optional>` locale
 
 **● locale**: *`string`*
+
+Language code for the widget. Default: 'en'
 
 ___
 <a id="margins"></a>
@@ -108,6 +112,8 @@ ___
 
 **● rtl**: *`boolean`*
 
+DEPRECATED the rtl direction is derrived automaticaly from the locale.
+
 ___
 <a id="thread"></a>
 
@@ -131,6 +137,8 @@ ___
 
 **● widgets**: *[WidgetConfig](annotoconfig.widgetconfig.md)[]*
 
+Widget configuration settings. NOTE: only single widget is supported. the array is for future use.
+
 ___
 <a id="width"></a>
 
@@ -144,6 +152,8 @@ ___
 ## `<Optional>` zIndex
 
 **● zIndex**: *`number`*
+
+The widget is position is absolute on page. Set the zIndex to appropriate value to make it visible and not iterfer with other elements. Default value: 100
 
 ___
 

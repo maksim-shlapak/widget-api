@@ -12,7 +12,7 @@
 
 **● enterTimeout**: *`number`*
 
-Set to true if when mouse enters the video frame the controls gets open.
+similar to moveTimeout but for mouse enter into video frame. Useful when trackMove is false
 
 ___
 <a id="hideonleave"></a>
@@ -21,7 +21,7 @@ ___
 
 **● hideOnLeave**: *`boolean`*
 
-Timeout in milliseconds after which the controls are hiding when mouse inside the player is not moved.
+Set to true if the controls are hiding when mouse leaves the video frame (see hideDelay below).
 
 ___
 <a id="movetimeout"></a>
@@ -30,7 +30,7 @@ ___
 
 **● moveTimeout**: *`number`*
 
-Set to true if movement of the mouse inside player opens the controls
+Timeout in milliseconds after which the controls are hiding when mouse inside the player is not moved.
 
 ___
 <a id="showonenter"></a>
@@ -39,7 +39,7 @@ ___
 
 **● showOnEnter**: *`boolean`*
 
-Set to true if the controls are hiding when mouse leaves the video frame (see hideDelay below).
+Set to true if when mouse enters the video frame the controls gets open.
 
 ___
 <a id="trackmove"></a>
@@ -47,6 +47,8 @@ ___
 ## `<Optional>` trackMove
 
 **● trackMove**: *`boolean`*
+
+Set to true if movement of the mouse inside player opens the controls
 
 ___
 

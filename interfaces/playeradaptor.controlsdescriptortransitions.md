@@ -12,7 +12,7 @@
 
 **● hideTiming**: *`string`*
 
-Set the css timming for controls show. Default: '0s linear'
+Set the css timming for controls hide. Default: '0s linear'
 
 ___
 <a id="showtiming"></a>
@@ -20,6 +20,8 @@ ___
 ## `<Optional>` showTiming
 
 **● showTiming**: *`string`*
+
+Set the css timming for controls show. Default: '0s linear'
 
 ___
 

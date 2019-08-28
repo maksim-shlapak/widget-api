@@ -10,22 +10,22 @@
 
 <a id="autoplay"></a>
 
-##  autoplay
+## `<Optional>` autoplay
 
 ▸ **autoplay**():  `boolean` &#124; `Promise`<`boolean`>
 
-*__description__*: Get player autoplay configuration option (if player configured to play on page load) If such an option is not supported, return false.
+*__description__*: (OPTIONAL) Get player autoplay configuration option (if player configured to play on page load)
 
 **Returns:**  `boolean` &#124; `Promise`<`boolean`>
 
 ___
 <a id="controlsdescriptor"></a>
 
-##  controlsDescriptor
+## `<Optional>` controlsDescriptor
 
 ▸ **controlsDescriptor**(): [ControlsDescriptor](playeradaptor.controlsdescriptor.md)
 
-*__description__*: Get player controls description parameters. The parameters describe behavior of the player controls.
+*__description__*: (OPTIONAL) Get player controls description parameters. The parameters describe behavior of the player controls.
 
 **Returns:** [ControlsDescriptor](playeradaptor.controlsdescriptor.md)
 controls descriptor object
@@ -37,7 +37,7 @@ ___
 
 ▸ **controlsElement**(): `Element`
 
-*__description__*: (OPTIONAL) Get player controls Element of type DIV for embedding annoto timeline for overlay and full screen mode. NOTE: if not supported the function must be undefined.
+*__description__*: (OPTIONAL) Get player controls Element for embedding annoto timeline for overlay and full screen mode. NOTE: Although this method is optional it's highly recomended and will make the integration much simpler, imrove performance and provide better User experience. NOTE: if not supported the function must be undefined.
 
 **Returns:** `Element`
 
@@ -48,7 +48,7 @@ ___
 
 ▸ **controlsHeight**():  `number` &#124; `string`
 
-*__description__*: (OPTIONAL) Get player controls height in pixels. If supported it will be used instead of controlsDescriptor values. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player. Below it is defined only for purposes of API documentation.
+*__description__*: (OPTIONAL) Get player controls height in pixels. If supported it will be used instead of controlsDescriptor values. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player.
 
 **Returns:**  `number` &#124; `string`
 
@@ -61,7 +61,7 @@ ___
 
 ▸ **controlsHidden**(): `boolean`
 
-*__description__*: (OPTIONAL) Get player controls hidden state. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect controls state. Below it is defined only for purposes of API documentation.
+*__description__*: (OPTIONAL) Get player controls hidden state. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect controls state.
 
 **Returns:** `boolean`
 
@@ -98,7 +98,7 @@ ___
 
 ▸ **embeddableElement**(): `Element`
 
-*__description__*: (OPTIONAL) Get player Element of type DIV for embedding annoto application for full screen state. NOTE: if not supported the function must be undefined.
+*__description__*: (OPTIONAL) Get player Element for embedding annoto application for full screen state. If not provided the main player Element would be used (the element provided at init()). NOTE: if not supported the function must be undefined.
 
 **Returns:** `Element`
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **fixFullScreen**(): `boolean`
 
-*__description__*: (OPTIONAL) By default Annoto will try applying a fix To enable Annoto to work when player enters Full screen. The fix is moving annoto-app container as a child of the player element or embeddableElement() annoto-app will be moved only if it the player element allows it (is DIV). annoto-app will be moved when player enters full screen, and moved back to the original parent of annoto-app obtained at Annoto.boot() call. NOTE: In rare case when this must be disabled, return false from the function. NOTE: if not required/supported the function must be undefined.
+*__description__*: (OPTIONAL) By default Annoto will try applying a fix To enable Annoto to work when player enters Full screen. The fix is moving annoto-app container as a child of the player element or embeddableElement() annoto-app will be moved only if the player element allows it (is NOT an IFRAME). annoto-app will be moved when player enters full screen, and moved back to the original parent of annoto-app obtained at Annoto.boot() call. NOTE: In rare case when this must be disabled, return false from the function.
 
 **Returns:** `boolean`
 
@@ -120,7 +120,7 @@ ___
 
 ▸ **fullScreen**(): `boolean`
 
-*__description__*: (OPTIONAL) Get player full screen state. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect full screen. Below it is defined only for purposes of API documentation.
+*__description__*: (OPTIONAL) Get player full screen state. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect full screen.
 
 **Returns:** `boolean`
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **height**():  `number` &#124; `string`
 
-*__description__*: (OPTIONAL) Get player height in pixels. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player. Below it is defined only for purposes of API documentation.
+*__description__*: (OPTIONAL) Get player height in pixels. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player.
 
 **Returns:**  `number` &#124; `string`
 
@@ -142,7 +142,7 @@ ___
 
 ##  init
 
-▸ **init**(element: *`Element`*, params: *`any`*):  `boolean` &#124; `Promise`<`boolean`>
+▸ **init**(element: *`Element`*, params?: *`any`*):  `boolean` &#124; `Promise`<`boolean`>
 
 *__description__*: This method is called by Annoto as the first method. Use it to configure the player interface object. If the method returns false, Annoto will retry a number of times with fixed period of time between the retries. This is useful if your player needs to load some resources, or wait for some condition. Notice: For Advanced use cases, the method can return a Promise. If a Promise is returned, No retries shall be performed. Annoto will wait for Promise resolve/reject.
 
@@ -151,7 +151,7 @@ ___
 | Name | Type | Description |
 | ------ | ------ | ------ |
 | element | `Element` |  html DOM element of the player (as configured by Annoto API) |
-| params | `any` |  player.params of API configuration |
+| `Optional` params | `any` |  player.params of API configuration |
 
 **Returns:**  `boolean` &#124; `Promise`<`boolean`>
 
@@ -173,7 +173,7 @@ ___
 
 ▸ **mediaMetadata**():  [MediaDetails](annotoconfig.mediadetails.md) &#124; `Promise`<[MediaDetails](annotoconfig.mediadetails.md)>
 
-*__description__*: (OPTIONAL) Get Details for the media.
+*__description__*: (OPTIONAL) Get Details for the media. Notice: this value can be overriden by player.mediaDetails widget configuration.
 
 **Returns:**  [MediaDetails](annotoconfig.mediadetails.md) &#124; `Promise`<[MediaDetails](annotoconfig.mediadetails.md)>
 
@@ -184,7 +184,7 @@ ___
 
 ▸ **mediaSrc**():  `string` &#124; `Promise`<`string`>
 
-*__description__*: Get full URL of the currently played media source.
+*__description__*: Get currently played media source. The returned value, identifies the current video and must be unique. It can be a full URL or an unique identifier. Notice: this value can be overriden by player.mediaSrc widget configuration.
 
 **Returns:**  `string` &#124; `Promise`<`string`>
 
@@ -195,7 +195,7 @@ ___
 
 ▸ **onControlsEnter**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
-*__description__*: (OPTIONAL) cb should be called when mouse enters player controls. If implemented the onControlsLeave() method must be implemented as well. NOTE: In most cases this event is not required. NOTE: if not supported the function must be undefined. If defined the main usage of this event is to hide Annoto Timeline when user hovers mouse over the players controls, for example for players where Annoto Timeline interfers with some hover functionality of the player. The function is required only for Iframe players for other players Annoto can detect the event by itself.
+*__description__*: (DEPRECATED) cb should be called when mouse enters player controls. If implemented the onControlsLeave() method must be implemented as well. NOTE: In most cases this event is not required. NOTE: if not supported the function must be undefined. If defined the main usage of this event is to hide Annoto Timeline when user hovers mouse over the players controls, for example for players where Annoto Timeline interfers with some hover functionality of the player. The function is required only for Iframe players for other players Annoto can detect the event by itself.
 
 **Parameters:**
 
@@ -229,7 +229,7 @@ ___
 
 ▸ **onControlsLeave**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
-*__description__*: (OPTIONAL) cb should be called when mouse leaves player controls. If implemented the onControlsEnter() method must be implemented as well. NOTE: In most cases this event is not required. NOTE: if not supported the function must be undefined. If defined the main usage of this event is to hide Annoto Timeline when user hovers mouse over the players controls, for example for players where Annoto Timeline interfers with some hover functionality of the player. The function is required only for Iframe players for other players Annoto can detect the event by itself.
+*__description__*: (DEPRECATED) cb should be called when mouse leaves player controls. If implemented the onControlsEnter() method must be implemented as well. NOTE: In most cases this event is not required. NOTE: if not supported the function must be undefined. If defined the main usage of this event is to hide Annoto Timeline when user hovers mouse over the players controls, for example for players where Annoto Timeline interfers with some hover functionality of the player. The function is required only for Iframe players for other players Annoto can detect the event by itself.
 
 **Parameters:**
 
@@ -257,30 +257,13 @@ ___
 **Returns:** `void`
 
 ___
-<a id="onerror"></a>
-
-## `<Optional>` onError
-
-▸ **onError**(cb: *`function`*): `void`
-
-*__description__*: (OPTIONAL) cb should be called when an error occurred during the loading of the media.
-
-**Parameters:**
-
-| Name | Type |
-| ------ | ------ |
-| cb | `function` |
-
-**Returns:** `void`
-
-___
 <a id="onfullscreen"></a>
 
 ## `<Optional>` onFullScreen
 
 ▸ **onFullScreen**(cb: *`function`*): `void`
 
-*__description__*: (OPTIONAL) cb should be called when full screen state of the player changes. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect full screen.
+*__description__*: (OPTIONAL) cb should be called when full screen state of the player changes. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect full screen changes.
 
 **Parameters:**
 
@@ -348,7 +331,7 @@ ___
 
 ▸ **onReady**(cb: *[PlayerEventCallback](../modules/playeradaptor.md#playereventcallback)*): `void`
 
-*__description__*: cb should be called when the player is setup and the media metadata is loaded. This method must be called as the first event. If your player does not support this event, simulate it by calling the cb manually.
+*__description__*: cb should be called when the player is setup and the media metadata is loaded. Note: This method MUST be called as the first event. If your player does not support this event, simulate it by calling the cb manually.
 
 **Parameters:**
 
@@ -496,7 +479,7 @@ ___
 
 ▸ **trackMarginLeft**():  `number` &#124; `string`
 
-*__description__*: (OPTIONAL) Get player player controls track left margin in pixels. If supported it will be used instead of controlsDescriptor values. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player. Below it is defined only for purposes of API documentation.
+*__description__*: (OPTIONAL) Get player controls track (progress bar) left margin in pixels. If supported it will be used instead of controlsDescriptor values. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player.
 
 **Returns:**  `number` &#124; `string`
 
@@ -509,7 +492,7 @@ ___
 
 ▸ **trackMarginRight**():  `number` &#124; `string`
 
-*__description__*: (OPTIONAL) Get player player controls track right margin in pixels. If supported it will be used instead of controlsDescriptor values. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player. Below it is defined only for purposes of API documentation.
+*__description__*: (OPTIONAL) Get player player controls track (progress bar) right margin in pixels. If supported it will be used instead of controlsDescriptor values. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect height of the player.
 
 **Returns:**  `number` &#124; `string`
 
@@ -551,7 +534,7 @@ ___
 
 ▸ **width**():  `number` &#124; `string`
 
-*__description__*: (OPTIONAL) Get player width in pixels. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect width of the player. Below it is defined only for purposes of API documentation.
+*__description__*: (OPTIONAL) Get player width in pixels. NOTE: if not supported the function must be undefined. Annoto will use other methods to detect width of the player.
 
 **Returns:**  `number` &#124; `string`
 

@@ -32,7 +32,7 @@ ___
 
 **● fullScreen**: *[ControlsDescriptorFullscreen](playeradaptor.controlsdescriptorfullscreen.md)*
 
-The track is the progress timeline element of the controls not including the other controls like the play button.
+Same parameters as above for full screen. Some players have different parameters of controls when they are in full screen.
 
 ___
 <a id="height"></a>
@@ -40,6 +40,8 @@ ___
 ##  height
 
 **● height**: *`number`*
+
+The height in pixels of the controls
 
 ___
 <a id="hidedelay"></a>
@@ -66,7 +68,7 @@ ___
 
 **● mouse**: *[ControlsDescriptorMouse](playeradaptor.controlsdescriptormouse.md)*
 
-Same parameters as above for full screen. Some players have different parameters of controls when they are in full screen.
+Mouse tracking
 
 ___
 <a id="scrubberoninoverlay"></a>
@@ -75,7 +77,7 @@ ___
 
 **● scrubberOnInOverlay**: *`boolean`*
 
-The height in pixels of the controls
+if true the custom scrubber bar will be enabled in overlay. By default player controls scrubber is assumed to present in overlay and the custom scrubber is not shown.
 
 ___
 <a id="showdelay"></a>
@@ -111,7 +113,7 @@ ___
 
 **● track**: *[ControlsDescriptorTrack](playeradaptor.controlsdescriptortrack.md)*
 
-if true the custom scrubber bar will be enabled in overlay. By default player controls scrubber is assumed to present in overlay and the custom scrubber is not shown.
+The track is the progress timeline element of the controls not including the other controls like the play button.
 
 ___
 <a id="transitions"></a>
@@ -128,6 +130,8 @@ ___
 ## `<Optional>` videoRatioOffsets
 
 **● videoRatioOffsets**: *[ControlsDescriptorVideoRatioOffsets](playeradaptor.controlsdescriptorvideoratiooffsets.md)*
+
+Video frame ratio offsets
 
 ___
 

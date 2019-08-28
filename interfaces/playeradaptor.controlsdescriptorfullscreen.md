@@ -19,6 +19,8 @@ ___
 
 **● topTrack**: *`object`*
 
+Set the margins for the timeline. if Annoto configured to place the timeline at the top of the screen when the player is in full screen.
+
 #### Type declaration
 
 `Optional`  margins: `number`
@@ -29,8 +31,6 @@ ___
 ##  track
 
 **● track**: *[ControlsDescriptorTrack](playeradaptor.controlsdescriptortrack.md)*
-
-Set the margins for the timeline. if Annoto configured to place the timeline at the top of the screen when the player is in full screen.
 
 ___
 
