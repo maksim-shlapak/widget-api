@@ -179,11 +179,6 @@ export interface AnnotoConfig {
      */
     ux?: UxConfig;
     /**
-     * DEPRECATED
-     * the rtl direction is derrived automaticaly from the locale.
-     */
-    rtl?: boolean;
-    /**
      * Language code for the widget.
      * Default: 'en'
      */
