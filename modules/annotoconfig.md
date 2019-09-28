@@ -19,5 +19,20 @@
 * [WidgetMargins](../interfaces/annotoconfig.widgetmargins.md)
 * [WidgetSizeConfig](../interfaces/annotoconfig.widgetsizeconfig.md)
 
+### Type aliases
+
+* [SortByType](annotoconfig.md#sortbytype)
+
 ---
+
+# Type aliases
+
+<a id="sortbytype"></a>
+
+##  SortByType
+
+**Ƭ SortByType**: * "most_recent" &#124; "top_rated" &#124; "by_timetag"
+*
+
+___
 

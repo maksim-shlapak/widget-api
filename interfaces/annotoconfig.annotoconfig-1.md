@@ -106,15 +106,6 @@ ___
 *
 
 ___
-<a id="rtl"></a>
-
-## `<Optional>` rtl
-
-**● rtl**: *`boolean`*
-
-DEPRECATED the rtl direction is derrived automaticaly from the locale.
-
-___
 <a id="thread"></a>
 
 ## `<Optional>` thread

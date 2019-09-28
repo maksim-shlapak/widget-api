@@ -6,26 +6,22 @@
 
 # Properties
 
-<a id="rtononfirstplay"></a>
-
-## `<Optional>` rtOnOnFirstPlay
-
-**● rtOnOnFirstPlay**: *`boolean`*
-
-___
 <a id="showreplies"></a>
 
 ## `<Optional>` showReplies
 
 **● showReplies**: *`boolean`*
 
+If set to true, when widget is loaded all the replies to comments will be shown.
+
 ___
-<a id="type"></a>
+<a id="sort"></a>
 
-## `<Optional>` type
+## `<Optional>` sort
 
-**● type**: * "video" &#124; "text"
-*
+**● sort**: *[SortByType](../modules/annotoconfig.md#sortbytype)*
+
+The default sorting to use on startup. Default: 'most\_recent'
 
 ___
 
