@@ -27,7 +27,6 @@ export interface WidgetMargins {
 
 export interface ThreadConfig {
     showReplies?: boolean;
-    rtOnOnFirstPlay?: boolean;
     type?: 'video' | 'text';
 }
 
