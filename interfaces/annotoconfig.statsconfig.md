@@ -1,16 +1,17 @@
+# Interface: StatsConfig
 
+## Hierarchy
 
-# Hierarchy
+* **StatsConfig**
 
-**StatsConfig**
+## Index
 
-# Properties
+### Properties
 
-<a id="host"></a>
+* [host](annotoconfig.statsconfig.md#host)
 
-##  host
+## Properties
 
-**● host**: *`HTMLElement`*
+###  host
 
-___
-
+• **host**: *HTMLElement*

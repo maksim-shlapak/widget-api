@@ -1,30 +1,31 @@
+# Interface: LaunchSourceConfig
 
+## Hierarchy
 
-# Hierarchy
+* **LaunchSourceConfig**
 
-**LaunchSourceConfig**
+## Index
 
-# Properties
+### Properties
 
-<a id="accesstoken"></a>
+* [accessToken](annotoconfig.launchsourceconfig.md#optional-accesstoken)
+* [consumerKey](annotoconfig.launchsourceconfig.md#optional-consumerkey)
+* [origin](annotoconfig.launchsourceconfig.md#optional-origin)
 
-## `<Optional>` accessToken
+## Properties
 
-**● accessToken**: *`string`*
+### `Optional` accessToken
 
-___
-<a id="consumerkey"></a>
-
-## `<Optional>` consumerKey
-
-**● consumerKey**: *`string`*
-
-___
-<a id="origin"></a>
-
-## `<Optional>` origin
-
-**● origin**: *`string`*
+• **accessToken**? : *string*
 
 ___
 
+### `Optional` consumerKey
+
+• **consumerKey**? : *string*
+
+___
+
+### `Optional` origin
+
+• **origin**? : *string*

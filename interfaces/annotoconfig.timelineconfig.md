@@ -1,65 +1,66 @@
+# Interface: TimelineConfig
 
+## Hierarchy
 
-# Hierarchy
+* **TimelineConfig**
 
-**TimelineConfig**
+## Index
 
-# Properties
+### Properties
 
-<a id="disabledockpadding"></a>
+* [disableDockPadding](annotoconfig.timelineconfig.md#optional-disabledockpadding)
+* [embedded](annotoconfig.timelineconfig.md#optional-embedded)
+* [height](annotoconfig.timelineconfig.md#optional-height)
+* [overlayVideo](annotoconfig.timelineconfig.md#optional-overlayvideo)
+* [positionTopInFullScreen](annotoconfig.timelineconfig.md#optional-positiontopinfullscreen)
+* [scrubberAlwaysOn](annotoconfig.timelineconfig.md#optional-scrubberalwayson)
+* [scrubberColor](annotoconfig.timelineconfig.md#optional-scrubbercolor)
+* [scrubberHeight](annotoconfig.timelineconfig.md#optional-scrubberheight)
 
-## `<Optional>` disableDockPadding
+## Properties
 
-**● disableDockPadding**: *`boolean`*
+### `Optional` disableDockPadding
 
-___
-<a id="embedded"></a>
-
-## `<Optional>` embedded
-
-**● embedded**: *`boolean`*
-
-___
-<a id="height"></a>
-
-## `<Optional>` height
-
-**● height**: *`number`*
-
-___
-<a id="overlayvideo"></a>
-
-## `<Optional>` overlayVideo
-
-**● overlayVideo**: *`boolean`*
-
-___
-<a id="positiontopinfullscreen"></a>
-
-## `<Optional>` positionTopInFullScreen
-
-**● positionTopInFullScreen**: *`boolean`*
-
-___
-<a id="scrubberalwayson"></a>
-
-## `<Optional>` scrubberAlwaysOn
-
-**● scrubberAlwaysOn**: *`boolean`*
-
-___
-<a id="scrubbercolor"></a>
-
-## `<Optional>` scrubberColor
-
-**● scrubberColor**: *`string`*
-
-___
-<a id="scrubberheight"></a>
-
-## `<Optional>` scrubberHeight
-
-**● scrubberHeight**: *`number`*
+• **disableDockPadding**? : *boolean*
 
 ___
 
+### `Optional` embedded
+
+• **embedded**? : *boolean*
+
+___
+
+### `Optional` height
+
+• **height**? : *number*
+
+___
+
+### `Optional` overlayVideo
+
+• **overlayVideo**? : *boolean*
+
+___
+
+### `Optional` positionTopInFullScreen
+
+• **positionTopInFullScreen**? : *boolean*
+
+___
+
+### `Optional` scrubberAlwaysOn
+
+• **scrubberAlwaysOn**? : *boolean*
+
+___
+
+### `Optional` scrubberColor
+
+• **scrubberColor**? : *string*
+
+___
+
+### `Optional` scrubberHeight
+
+• **scrubberHeight**? : *number*

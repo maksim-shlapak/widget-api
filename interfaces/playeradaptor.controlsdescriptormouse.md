@@ -1,54 +1,58 @@
+# Interface: ControlsDescriptorMouse
 
+## Hierarchy
 
-# Hierarchy
+* **ControlsDescriptorMouse**
 
-**ControlsDescriptorMouse**
+## Index
 
-# Properties
+### Properties
 
-<a id="entertimeout"></a>
+* [enterTimeout](playeradaptor.controlsdescriptormouse.md#optional-entertimeout)
+* [hideOnLeave](playeradaptor.controlsdescriptormouse.md#optional-hideonleave)
+* [moveTimeout](playeradaptor.controlsdescriptormouse.md#optional-movetimeout)
+* [showOnEnter](playeradaptor.controlsdescriptormouse.md#optional-showonenter)
+* [trackMove](playeradaptor.controlsdescriptormouse.md#optional-trackmove)
 
-## `<Optional>` enterTimeout
+## Properties
 
-**● enterTimeout**: *`number`*
+### `Optional` enterTimeout
 
-similar to moveTimeout but for mouse enter into video frame. Useful when trackMove is false
+• **enterTimeout**? : *number*
 
-___
-<a id="hideonleave"></a>
-
-## `<Optional>` hideOnLeave
-
-**● hideOnLeave**: *`boolean`*
-
-Set to true if the controls are hiding when mouse leaves the video frame (see hideDelay below).
-
-___
-<a id="movetimeout"></a>
-
-## `<Optional>` moveTimeout
-
-**● moveTimeout**: *`number`*
-
-Timeout in milliseconds after which the controls are hiding when mouse inside the player is not moved.
+similar to moveTimeout but for mouse enter into video frame.
+Useful when trackMove is false
 
 ___
-<a id="showonenter"></a>
 
-## `<Optional>` showOnEnter
+### `Optional` hideOnLeave
 
-**● showOnEnter**: *`boolean`*
+• **hideOnLeave**? : *boolean*
+
+Set to true if the controls are hiding when mouse leaves the video frame
+(see hideDelay below).
+
+___
+
+### `Optional` moveTimeout
+
+• **moveTimeout**? : *number*
+
+Timeout in milliseconds after which the controls are hiding
+when mouse inside the player is not moved.
+
+___
+
+### `Optional` showOnEnter
+
+• **showOnEnter**? : *boolean*
 
 Set to true if when mouse enters the video frame the controls gets open.
 
 ___
-<a id="trackmove"></a>
 
-## `<Optional>` trackMove
+### `Optional` trackMove
 
-**● trackMove**: *`boolean`*
+• **trackMove**? : *boolean*
 
 Set to true if movement of the mouse inside player opens the controls
-
-___
-

@@ -1,38 +1,42 @@
+# Interface: OriginProvider
 
+## Hierarchy
 
-# Hierarchy
+* **OriginProvider**
 
-**OriginProvider**
+## Index
 
-# Methods
+### Methods
 
-<a id="getmediadeeplinkurl"></a>
+* [getMediaDeepLinkUrl](annoto.originprovider.md#optional-getmediadeeplinkurl)
+* [getPageUrl](annoto.originprovider.md#optional-getpageurl)
 
-## `<Optional>` getMediaDeepLinkUrl
+## Methods
 
-▸ **getMediaDeepLinkUrl**(currentTime: *`number`*, mediaSrc: *`string`*): `string`
+### `Optional` getMediaDeepLinkUrl
 
-Url to the video page and specific playback time of currentTime. If provided will be used by annoto for email notifications, in the dashboard, etc.
+▸ **getMediaDeepLinkUrl**(`currentTime`: number, `mediaSrc`: string): *string*
+
+Url to the video page and specific playback time of currentTime.
+If provided will be used by annoto for email notifications, in the dashboard, etc.
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| currentTime | `number` |  current playback time of the player in seconds |
-| mediaSrc | `string` |  the media source of the player |
+Name | Type | Description |
+------ | ------ | ------ |
+`currentTime` | number | current playback time of the player in seconds |
+`mediaSrc` | string | the media source of the player  |
 
-**Returns:** `string`
-
-___
-<a id="getpageurl"></a>
-
-## `<Optional>` getPageUrl
-
-▸ **getPageUrl**(): `string`
-
-Url to the video page. Useful if Annoto is embedded inside iframe for example. default: window.location.href is used.
-
-**Returns:** `string`
+**Returns:** *string*
 
 ___
 
+### `Optional` getPageUrl
+
+▸ **getPageUrl**(): *string*
+
+Url to the video page.
+Useful if Annoto is embedded inside iframe for example.
+default: window.location.href is used.
+
+**Returns:** *string*

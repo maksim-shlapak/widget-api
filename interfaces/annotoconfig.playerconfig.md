@@ -1,72 +1,72 @@
+# Interface: PlayerConfig
 
+## Hierarchy
 
-# Hierarchy
+* **PlayerConfig**
 
-**PlayerConfig**
+## Index
 
-# Properties
+### Properties
 
-<a id="api"></a>
+* [api](annotoconfig.playerconfig.md#optional-api)
+* [element](annotoconfig.playerconfig.md#optional-element)
+* [params](annotoconfig.playerconfig.md#optional-params)
+* [type](annotoconfig.playerconfig.md#type)
+* [wide](annotoconfig.playerconfig.md#optional-wide)
 
-## `<Optional>` api
+### Methods
 
-**● api**: *[PlayerAdaptorApi](playeradaptor.playeradaptorapi.md)*
+* [mediaDetails](annotoconfig.playerconfig.md#optional-mediadetails)
+* [mediaSrc](annotoconfig.playerconfig.md#optional-mediasrc)
 
-___
-<a id="element"></a>
+## Properties
 
-## `<Optional>` element
+### `Optional` api
 
-**● element**: * `string` &#124; `Element`
-*
-
-___
-<a id="params"></a>
-
-## `<Optional>` params
-
-**● params**: *`any`*
-
-___
-<a id="type"></a>
-
-##  type
-
-**● type**: *`string`*
-
-___
-<a id="wide"></a>
-
-## `<Optional>` wide
-
-**● wide**: *`boolean`*
+• **api**? : *[PlayerAdaptorApi](playeradaptor.playeradaptorapi.md)*
 
 ___
 
-# Methods
+### `Optional` element
 
-<a id="mediadetails"></a>
+• **element**? : *string | Element*
 
-## `<Optional>` mediaDetails
+___
 
-▸ **mediaDetails**(details?: *[MediaDetails](annotoconfig.mediadetails.md)*):  [MediaDetails](annotoconfig.mediadetails.md) &#124; `Promise`<[MediaDetails](annotoconfig.mediadetails.md)>
+### `Optional` params
+
+• **params**? : *any*
+
+___
+
+###  type
+
+• **type**: *string*
+
+___
+
+### `Optional` wide
+
+• **wide**? : *boolean*
+
+## Methods
+
+### `Optional` mediaDetails
+
+▸ **mediaDetails**(`details?`: [MediaDetails](annotoconfig.mediadetails.md)): *[MediaDetails](annotoconfig.mediadetails.md) | Promise‹[MediaDetails](annotoconfig.mediadetails.md)›*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` details | [MediaDetails](annotoconfig.mediadetails.md) |
+Name | Type |
+------ | ------ |
+`details?` | [MediaDetails](annotoconfig.mediadetails.md) |
 
-**Returns:**  [MediaDetails](annotoconfig.mediadetails.md) &#124; `Promise`<[MediaDetails](annotoconfig.mediadetails.md)>
-
-___
-<a id="mediasrc"></a>
-
-## `<Optional>` mediaSrc
-
-▸ **mediaSrc**(): `string`
-
-**Returns:** `string`
+**Returns:** *[MediaDetails](annotoconfig.mediadetails.md) | Promise‹[MediaDetails](annotoconfig.mediadetails.md)›*
 
 ___
 
+### `Optional` mediaSrc
+
+▸ **mediaSrc**(): *string*
+
+**Returns:** *string*

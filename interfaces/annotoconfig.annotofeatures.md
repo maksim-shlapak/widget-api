@@ -1,107 +1,108 @@
+# Interface: AnnotoFeatures
 
+## Hierarchy
 
-# Hierarchy
+* **AnnotoFeatures**
 
-**AnnotoFeatures**
+## Index
 
-# Properties
+### Properties
 
-<a id="commentsentiment"></a>
+* [commentSentiment](annotoconfig.annotofeatures.md#optional-commentsentiment)
+* [comments](annotoconfig.annotofeatures.md#optional-comments)
+* [commentsSubmit](annotoconfig.annotofeatures.md#optional-commentssubmit)
+* [cta](annotoconfig.annotofeatures.md#optional-cta)
+* [darkTheme](annotoconfig.annotofeatures.md#optional-darktheme)
+* [minibar](annotoconfig.annotofeatures.md#optional-minibar)
+* [popout](annotoconfig.annotofeatures.md#optional-popout)
+* [privateNotes](annotoconfig.annotofeatures.md#optional-privatenotes)
+* [privateNotesSubmit](annotoconfig.annotofeatures.md#optional-privatenotessubmit)
+* [stats](annotoconfig.annotofeatures.md#optional-stats)
+* [tabs](annotoconfig.annotofeatures.md#optional-tabs)
+* [threadVote](annotoconfig.annotofeatures.md#optional-threadvote)
+* [userPreferences](annotoconfig.annotofeatures.md#optional-userpreferences)
+* [voteEmotions](annotoconfig.annotofeatures.md#optional-voteemotions)
 
-## `<Optional>` commentSentiment
+## Properties
 
-**● commentSentiment**: *`boolean`*
+### `Optional` commentSentiment
 
-___
-<a id="comments"></a>
-
-## `<Optional>` comments
-
-**● comments**: *`boolean`*
-
-___
-<a id="commentssubmit"></a>
-
-## `<Optional>` commentsSubmit
-
-**● commentsSubmit**: *`boolean`*
-
-___
-<a id="cta"></a>
-
-## `<Optional>` cta
-
-**● cta**: *`boolean`*
-
-___
-<a id="darktheme"></a>
-
-## `<Optional>` darkTheme
-
-**● darkTheme**: *`boolean`*
-
-___
-<a id="minibar"></a>
-
-## `<Optional>` minibar
-
-**● minibar**: *`boolean`*
-
-___
-<a id="popout"></a>
-
-## `<Optional>` popout
-
-**● popout**: *`boolean`*
-
-___
-<a id="privatenotes"></a>
-
-## `<Optional>` privateNotes
-
-**● privateNotes**: *`boolean`*
-
-___
-<a id="privatenotessubmit"></a>
-
-## `<Optional>` privateNotesSubmit
-
-**● privateNotesSubmit**: *`boolean`*
-
-___
-<a id="stats"></a>
-
-## `<Optional>` stats
-
-**● stats**: *`boolean`*
-
-___
-<a id="tabs"></a>
-
-## `<Optional>` tabs
-
-**● tabs**: *`boolean`*
-
-___
-<a id="threadvote"></a>
-
-## `<Optional>` threadVote
-
-**● threadVote**: *`boolean`*
-
-___
-<a id="userpreferences"></a>
-
-## `<Optional>` userPreferences
-
-**● userPreferences**: *`boolean`*
-
-___
-<a id="voteemotions"></a>
-
-## `<Optional>` voteEmotions
-
-**● voteEmotions**: *`boolean`*
+• **commentSentiment**? : *boolean*
 
 ___
 
+### `Optional` comments
+
+• **comments**? : *boolean*
+
+___
+
+### `Optional` commentsSubmit
+
+• **commentsSubmit**? : *boolean*
+
+___
+
+### `Optional` cta
+
+• **cta**? : *boolean*
+
+___
+
+### `Optional` darkTheme
+
+• **darkTheme**? : *boolean*
+
+___
+
+### `Optional` minibar
+
+• **minibar**? : *boolean*
+
+___
+
+### `Optional` popout
+
+• **popout**? : *boolean*
+
+___
+
+### `Optional` privateNotes
+
+• **privateNotes**? : *boolean*
+
+___
+
+### `Optional` privateNotesSubmit
+
+• **privateNotesSubmit**? : *boolean*
+
+___
+
+### `Optional` stats
+
+• **stats**? : *boolean*
+
+___
+
+### `Optional` tabs
+
+• **tabs**? : *boolean*
+
+___
+
+### `Optional` threadVote
+
+• **threadVote**? : *boolean*
+
+___
+
+### `Optional` userPreferences
+
+• **userPreferences**? : *boolean*
+
+___
+
+### `Optional` voteEmotions
+
+• **voteEmotions**? : *boolean*

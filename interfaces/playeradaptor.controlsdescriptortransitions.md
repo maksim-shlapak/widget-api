@@ -1,27 +1,30 @@
+# Interface: ControlsDescriptorTransitions
 
+## Hierarchy
 
-# Hierarchy
+* **ControlsDescriptorTransitions**
 
-**ControlsDescriptorTransitions**
+## Index
 
-# Properties
+### Properties
 
-<a id="hidetiming"></a>
+* [hideTiming](playeradaptor.controlsdescriptortransitions.md#optional-hidetiming)
+* [showTiming](playeradaptor.controlsdescriptortransitions.md#optional-showtiming)
 
-## `<Optional>` hideTiming
+## Properties
 
-**● hideTiming**: *`string`*
+### `Optional` hideTiming
 
-Set the css timming for controls hide. Default: '0s linear'
+• **hideTiming**? : *string*
 
-___
-<a id="showtiming"></a>
-
-## `<Optional>` showTiming
-
-**● showTiming**: *`string`*
-
-Set the css timming for controls show. Default: '0s linear'
+Set the css timming for controls hide.
+Default: '0s linear'
 
 ___
 
+### `Optional` showTiming
+
+• **showTiming**? : *string*
+
+Set the css timming for controls show.
+Default: '0s linear'

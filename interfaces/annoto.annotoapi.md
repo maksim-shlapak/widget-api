@@ -1,143 +1,155 @@
+# Interface: AnnotoApi
 
+## Hierarchy
 
-# Hierarchy
+* **AnnotoApi**
 
-**AnnotoApi**
+## Index
 
-# Methods
+### Methods
 
-<a id="auth"></a>
+* [auth](annoto.annotoapi.md#auth)
+* [close](annoto.annotoapi.md#close)
+* [getMetadata](annoto.annotoapi.md#getmetadata)
+* [hide](annoto.annotoapi.md#hide)
+* [load](annoto.annotoapi.md#load)
+* [logout](annoto.annotoapi.md#logout)
+* [registerDeviceDetector](annoto.annotoapi.md#registerdevicedetector)
+* [registerOriginProvider](annoto.annotoapi.md#registeroriginprovider)
+* [show](annoto.annotoapi.md#show)
 
-##  auth
+## Methods
 
-▸ **auth**(token: *`string`*, cb?: *`function`*): `Promise`<`void`>
+###  auth
 
-**Parameters:**
-
-| Name | Type |
-| ------ | ------ |
-| token | `string` |
-| `Optional` cb | `function` |
-
-**Returns:** `Promise`<`void`>
-
-___
-<a id="close"></a>
-
-##  close
-
-▸ **close**(index?: *`number`*, cb?: *`function`*): `Promise`<`void`>
+▸ **auth**(`token`: string, `cb?`: function): *Promise‹void›*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` index | `number` |
-| `Optional` cb | `function` |
+▪ **token**: *string*
 
-**Returns:** `Promise`<`void`>
+▪`Optional`  **cb**: *function*
 
-___
-<a id="getmetadata"></a>
+▸ (): *void*
 
-##  getMetadata
-
-▸ **getMetadata**(): [AnnotoMetadata](annoto.annotometadata.md)
-
-**Returns:** [AnnotoMetadata](annoto.annotometadata.md)
+**Returns:** *Promise‹void›*
 
 ___
-<a id="hide"></a>
 
-##  hide
+###  close
 
-▸ **hide**(cb?: *`function`*): `Promise`<`void`>
+▸ **close**(`index?`: number, `cb?`: function): *Promise‹void›*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` cb | `function` |
+▪`Optional`  **index**: *number*
 
-**Returns:** `Promise`<`void`>
+▪`Optional`  **cb**: *function*
+
+▸ (): *void*
+
+**Returns:** *Promise‹void›*
 
 ___
-<a id="load"></a>
 
-##  load
+###  getMetadata
 
-▸ **load**(config: *[AnnotoConfig](annotoconfig.annotoconfig-1.md)*, cb?: *`function`*): `Promise`<`void`>
+▸ **getMetadata**(): *[AnnotoMetadata](annoto.annotometadata.md)*
+
+**Returns:** *[AnnotoMetadata](annoto.annotometadata.md)*
+
+___
+
+###  hide
+
+▸ **hide**(`cb?`: function): *Promise‹void›*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| config | [AnnotoConfig](annotoconfig.annotoconfig-1.md) |
-| `Optional` cb | `function` |
+▪`Optional`  **cb**: *function*
 
-**Returns:** `Promise`<`void`>
+▸ (): *void*
+
+**Returns:** *Promise‹void›*
 
 ___
-<a id="logout"></a>
 
-##  logout
+###  load
 
-▸ **logout**(cb?: *`function`*): `Promise`<`void`>
+▸ **load**(`config`: [AnnotoConfig](annotoconfig.annotoconfig-1.md), `cb?`: function): *Promise‹void›*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` cb | `function` |
+▪ **config**: *[AnnotoConfig](annotoconfig.annotoconfig-1.md)*
 
-**Returns:** `Promise`<`void`>
+▪`Optional`  **cb**: *function*
+
+▸ (): *void*
+
+**Returns:** *Promise‹void›*
 
 ___
-<a id="registerdevicedetector"></a>
 
-##  registerDeviceDetector
+###  logout
 
-▸ **registerDeviceDetector**(detector: *[DeviceDetectorApi](annoto.devicedetectorapi.md)*, cb?: *`function`*): `Promise`<`void`>
+▸ **logout**(`cb?`: function): *Promise‹void›*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| detector | [DeviceDetectorApi](annoto.devicedetectorapi.md) |
-| `Optional` cb | `function` |
+▪`Optional`  **cb**: *function*
 
-**Returns:** `Promise`<`void`>
+▸ (): *void*
+
+**Returns:** *Promise‹void›*
 
 ___
-<a id="registeroriginprovider"></a>
 
-##  registerOriginProvider
+###  registerDeviceDetector
 
-▸ **registerOriginProvider**(provider: *[OriginProvider](annoto.originprovider.md)*, cb?: *`function`*): `Promise`<`void`>
+▸ **registerDeviceDetector**(`detector`: [DeviceDetectorApi](annoto.devicedetectorapi.md), `cb?`: function): *Promise‹void›*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| provider | [OriginProvider](annoto.originprovider.md) |
-| `Optional` cb | `function` |
+▪ **detector**: *[DeviceDetectorApi](annoto.devicedetectorapi.md)*
 
-**Returns:** `Promise`<`void`>
+▪`Optional`  **cb**: *function*
+
+▸ (): *void*
+
+**Returns:** *Promise‹void›*
 
 ___
-<a id="show"></a>
 
-##  show
+###  registerOriginProvider
 
-▸ **show**(cb?: *`function`*): `Promise`<`void`>
+▸ **registerOriginProvider**(`provider`: [OriginProvider](annoto.originprovider.md), `cb?`: function): *Promise‹void›*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| `Optional` cb | `function` |
+▪ **provider**: *[OriginProvider](annoto.originprovider.md)*
 
-**Returns:** `Promise`<`void`>
+▪`Optional`  **cb**: *function*
+
+▸ (`err?`: Error): *void*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`err?` | Error |
+
+**Returns:** *Promise‹void›*
 
 ___
 
+###  show
+
+▸ **show**(`cb?`: function): *Promise‹void›*
+
+**Parameters:**
+
+▪`Optional`  **cb**: *function*
+
+▸ (): *void*
+
+**Returns:** *Promise‹void›*

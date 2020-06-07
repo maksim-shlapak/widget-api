@@ -1,24 +1,24 @@
+# Interface: AnnotoUxEvent
 
+## Hierarchy
 
-# Hierarchy
+* **AnnotoUxEvent**
 
-**AnnotoUxEvent**
+## Index
 
-# Properties
+### Properties
 
-<a id="data"></a>
+* [data](annoto.annotouxevent.md#optional-data)
+* [name](annoto.annotouxevent.md#name)
 
-## `<Optional>` data
+## Properties
 
-**● data**: *`any`*
+### `Optional` data
 
-___
-<a id="name"></a>
-
-##  name
-
-**● name**: * "widget:hide" &#124; "widget:show" &#124; "timeline:hide" &#124; "timeline:show" &#124; "timeline:focusin" &#124; "timeline:focusout"
-*
+• **data**? : *any*
 
 ___
 
+###  name
+
+• **name**: *"widget:hide" | "widget:show" | "widget:minimise" | "timeline:hide" | "timeline:show" | "timeline:focusin" | "timeline:focusout"*

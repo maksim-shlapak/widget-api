@@ -1,53 +1,57 @@
+# Interface: WidgetConfig
 
+## Hierarchy
 
-# Hierarchy
+* **WidgetConfig**
 
-**WidgetConfig**
+## Index
 
-# Properties
+### Properties
 
-<a id="demodiscussion"></a>
+* [demoDiscussion](annotoconfig.widgetconfig.md#optional-demodiscussion)
+* [host](annotoconfig.widgetconfig.md#optional-host)
+* [openOnLoad](annotoconfig.widgetconfig.md#optional-openonload)
+* [player](annotoconfig.widgetconfig.md#player)
+* [stats](annotoconfig.widgetconfig.md#optional-stats)
+* [timeline](annotoconfig.widgetconfig.md#optional-timeline)
 
-## `<Optional>` demoDiscussion
+## Properties
 
-**● demoDiscussion**: *`string`*
+### `Optional` demoDiscussion
 
-___
-<a id="host"></a>
-
-## `<Optional>` host
-
-**● host**: *`HTMLElement`*
-
-*__description__*: If provided the discusion widget will be embedded inside the host element instead of as overlay The size of the widget is responsive and set to 100% width and height of the host element.
-
-___
-<a id="openonload"></a>
-
-## `<Optional>` openOnLoad
-
-**● openOnLoad**: *`boolean`*
-
-___
-<a id="player"></a>
-
-##  player
-
-**● player**: *[PlayerConfig](annotoconfig.playerconfig.md)*
-
-___
-<a id="stats"></a>
-
-## `<Optional>` stats
-
-**● stats**: *[StatsConfig](annotoconfig.statsconfig.md)*
-
-___
-<a id="timeline"></a>
-
-## `<Optional>` timeline
-
-**● timeline**: *[TimelineConfig](annotoconfig.timelineconfig.md)*
+• **demoDiscussion**? : *string*
 
 ___
 
+### `Optional` host
+
+• **host**? : *HTMLElement*
+
+If provided the discusion widget will be embedded inside the host element instead of as overlay
+The size of the widget is responsive and set to 100% width and height of the host element.
+
+___
+
+### `Optional` openOnLoad
+
+• **openOnLoad**? : *boolean*
+
+DEPRACATED. use ux.openOnLoad instead
+
+___
+
+###  player
+
+• **player**: *[PlayerConfig](annotoconfig.playerconfig.md)*
+
+___
+
+### `Optional` stats
+
+• **stats**? : *[StatsConfig](annotoconfig.statsconfig.md)*
+
+___
+
+### `Optional` timeline
+
+• **timeline**? : *[TimelineConfig](annotoconfig.timelineconfig.md)*

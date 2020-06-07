@@ -1,18 +1,20 @@
+# Interface: ControlsDescriptorTimeline
 
+## Hierarchy
 
-# Hierarchy
+* **ControlsDescriptorTimeline**
 
-**ControlsDescriptorTimeline**
+## Index
 
-# Properties
+### Properties
 
-<a id="fadeinout"></a>
+* [fadeInOut](playeradaptor.controlsdescriptortimeline.md#optional-fadeinout)
 
-## `<Optional>` fadeInOut
+## Properties
 
-**● fadeInOut**: *`boolean`*
+### `Optional` fadeInOut
 
-If set to true, and hideOnHide is true as well, the timeline will fade out/in. By default it will transition up and down instead.
+• **fadeInOut**? : *boolean*
 
-___
-
+If set to true, and hideOnHide is true as well, the timeline will fade out/in.
+By default it will transition up and down instead.

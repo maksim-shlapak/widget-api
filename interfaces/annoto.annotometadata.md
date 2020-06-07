@@ -1,37 +1,38 @@
+# Interface: AnnotoMetadata
 
+## Hierarchy
 
-# Hierarchy
+* **AnnotoMetadata**
 
-**AnnotoMetadata**
+## Index
 
-# Properties
+### Properties
 
-<a id="comments"></a>
+* [comments](annoto.annotometadata.md#comments)
+* [notes](annoto.annotometadata.md#optional-notes)
+* [thread](annoto.annotometadata.md#thread)
+* [visible](annoto.annotometadata.md#optional-visible)
 
-##  comments
+## Properties
 
-**● comments**: *[CommentsCounters](annoto.commentscounters.md)*
+###  comments
 
-___
-<a id="notes"></a>
-
-## `<Optional>` notes
-
-**● notes**: *[ContentCounters](annoto.contentcounters.md)*
-
-___
-<a id="thread"></a>
-
-##  thread
-
-**● thread**: *[ThreadMetadata](annoto.threadmetadata.md)*
-
-___
-<a id="visible"></a>
-
-## `<Optional>` visible
-
-**● visible**: *[VisibleCountersData](annoto.visiblecountersdata.md)*
+• **comments**: *[CommentsCounters](annoto.commentscounters.md)*
 
 ___
 
+### `Optional` notes
+
+• **notes**? : *[ContentCounters](annoto.contentcounters.md)*
+
+___
+
+###  thread
+
+• **thread**: *[ThreadMetadata](annoto.threadmetadata.md)*
+
+___
+
+### `Optional` visible
+
+• **visible**? : *[VisibleCountersData](annoto.visiblecountersdata.md)*

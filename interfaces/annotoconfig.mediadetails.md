@@ -1,58 +1,59 @@
+# Interface: MediaDetails
 
+## Hierarchy
 
-# Hierarchy
+* **MediaDetails**
 
-**MediaDetails**
+## Index
 
-# Properties
+### Properties
 
-<a id="authorname"></a>
+* [authorName](annotoconfig.mediadetails.md#optional-authorname)
+* [description](annotoconfig.mediadetails.md#optional-description)
+* [group](annotoconfig.mediadetails.md#optional-group)
+* [thumbnails](annotoconfig.mediadetails.md#optional-thumbnails)
+* [title](annotoconfig.mediadetails.md#title)
 
-## `<Optional>` authorName
+## Properties
 
-**● authorName**: *`string`*
+### `Optional` authorName
 
-___
-<a id="description"></a>
-
-## `<Optional>` description
-
-**● description**: *`string`*
-
-___
-<a id="group"></a>
-
-## `<Optional>` group
-
-**● group**: *`object`*
-
-#### Type declaration
-
-`Optional`  description: `string`
-
- id:  `string` &#124; `number`
-
-`Optional`  privateThread: `boolean`
-
-`Optional`  thumbnails: [Thumbnails](annotoconfig.thumbnails.md)
-
- title: `string`
-
-`Optional`  type:  "playlist" &#124; "users"
-
-___
-<a id="thumbnails-1"></a>
-
-## `<Optional>` thumbnails
-
-**● thumbnails**: *[Thumbnails](annotoconfig.thumbnails.md)*
-
-___
-<a id="title-1"></a>
-
-##  title
-
-**● title**: *`string`*
+• **authorName**? : *string*
 
 ___
 
+### `Optional` description
+
+• **description**? : *string*
+
+___
+
+### `Optional` group
+
+• **group**? : *object*
+
+#### Type declaration:
+
+* **description**? : *string*
+
+* **id**: *string | number*
+
+* **privateThread**? : *boolean*
+
+* **thumbnails**? : *[Thumbnails](annotoconfig.thumbnails.md)*
+
+* **title**: *string*
+
+* **type**? : *"playlist" | "users"*
+
+___
+
+### `Optional` thumbnails
+
+• **thumbnails**? : *[Thumbnails](annotoconfig.thumbnails.md)*
+
+___
+
+###  title
+
+• **title**: *string*

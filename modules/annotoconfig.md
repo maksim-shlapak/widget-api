@@ -1,6 +1,6 @@
+# Module: annotoConfig
 
-
-# Index
+## Index
 
 ### Interfaces
 
@@ -23,16 +23,8 @@
 
 * [SortByType](annotoconfig.md#sortbytype)
 
----
+## Type aliases
 
-# Type aliases
+###  SortByType
 
-<a id="sortbytype"></a>
-
-##  SortByType
-
-**Ƭ SortByType**: * "most_recent" &#124; "top_rated" &#124; "by_timetag"
-*
-
-___
-
+Ƭ **SortByType**: *"most_recent" | "top_rated" | "by_timetag"*

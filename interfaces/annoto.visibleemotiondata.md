@@ -1,37 +1,38 @@
+# Interface: VisibleEmotionData
 
+## Hierarchy
 
-# Hierarchy
+* **VisibleEmotionData**
 
-**VisibleEmotionData**
+## Index
 
-# Properties
+### Properties
 
-<a id="cn"></a>
+* [cn](annoto.visibleemotiondata.md#cn)
+* [rcn](annoto.visibleemotiondata.md#rcn)
+* [tvn](annoto.visibleemotiondata.md#tvn)
+* [vn](annoto.visibleemotiondata.md#vn)
 
-##  cn
+## Properties
 
-**● cn**: *`number`*
+###  cn
 
-___
-<a id="rcn"></a>
-
-##  rcn
-
-**● rcn**: *`number`*
-
-___
-<a id="tvn"></a>
-
-##  tvn
-
-**● tvn**: *`number`*
-
-___
-<a id="vn"></a>
-
-##  vn
-
-**● vn**: *`number`*
+• **cn**: *number*
 
 ___
 
+###  rcn
+
+• **rcn**: *number*
+
+___
+
+###  tvn
+
+• **tvn**: *number*
+
+___
+
+###  vn
+
+• **vn**: *number*

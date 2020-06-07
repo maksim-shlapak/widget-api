@@ -1,58 +1,44 @@
+# Interface: WidgetMargins
 
+Optional Margins from page edges for positioning the widget.
+Has effect only when:
+1. player not in full screen
+2. widget is not overaly on top of the player
+3. ux is not sidePanel
 
-# Hierarchy
+## Hierarchy
 
-**WidgetMargins**
+* **WidgetMargins**
 
-# Properties
+## Index
 
-<a id="bottom"></a>
+### Properties
 
-## `<Optional>` bottom
+* [bottom](annotoconfig.widgetmargins.md#optional-bottom)
+* [left](annotoconfig.widgetmargins.md#optional-left)
+* [right](annotoconfig.widgetmargins.md#optional-right)
+* [top](annotoconfig.widgetmargins.md#optional-top)
 
-**● bottom**: *`number`*
+## Properties
 
-___
-<a id="left"></a>
+### `Optional` bottom
 
-## `<Optional>` left
-
-**● left**: *`number`*
-
-___
-<a id="min"></a>
-
-## `<Optional>` min
-
-**● min**: *`number`*
-
-___
-<a id="minadaptive"></a>
-
-## `<Optional>` minAdaptive
-
-**● minAdaptive**: *`number`*
-
-___
-<a id="right"></a>
-
-## `<Optional>` right
-
-**● right**: *`number`*
-
-___
-<a id="rightsmall"></a>
-
-## `<Optional>` rightSmall
-
-**● rightSmall**: *`number`*
-
-___
-<a id="top"></a>
-
-## `<Optional>` top
-
-**● top**: *`number`*
+• **bottom**? : *number*
 
 ___
 
+### `Optional` left
+
+• **left**? : *number*
+
+___
+
+### `Optional` right
+
+• **right**? : *number*
+
+___
+
+### `Optional` top
+
+• **top**? : *number*

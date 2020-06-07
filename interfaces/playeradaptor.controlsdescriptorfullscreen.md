@@ -1,36 +1,39 @@
+# Interface: ControlsDescriptorFullscreen
 
+## Hierarchy
 
-# Hierarchy
+* **ControlsDescriptorFullscreen**
 
-**ControlsDescriptorFullscreen**
+## Index
 
-# Properties
+### Properties
 
-<a id="height"></a>
+* [height](playeradaptor.controlsdescriptorfullscreen.md#height)
+* [topTrack](playeradaptor.controlsdescriptorfullscreen.md#optional-toptrack)
+* [track](playeradaptor.controlsdescriptorfullscreen.md#track)
 
-##  height
+## Properties
 
-**● height**: *`number`*
+###  height
 
-___
-<a id="toptrack"></a>
-
-## `<Optional>` topTrack
-
-**● topTrack**: *`object`*
-
-Set the margins for the timeline. if Annoto configured to place the timeline at the top of the screen when the player is in full screen.
-
-#### Type declaration
-
-`Optional`  margins: `number`
-
-___
-<a id="track"></a>
-
-##  track
-
-**● track**: *[ControlsDescriptorTrack](playeradaptor.controlsdescriptortrack.md)*
+• **height**: *number*
 
 ___
 
+### `Optional` topTrack
+
+• **topTrack**? : *object*
+
+ Set the margins for the timeline.
+ if Annoto configured to place the timeline at the top of
+ the screen when the player is in full screen.
+
+#### Type declaration:
+
+* **margins**? : *number*
+
+___
+
+###  track
+
+• **track**: *[ControlsDescriptorTrack](playeradaptor.controlsdescriptortrack.md)*

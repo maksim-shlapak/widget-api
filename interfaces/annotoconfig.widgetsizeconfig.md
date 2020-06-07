@@ -1,23 +1,19 @@
+# Interface: WidgetSizeConfig
 
+DEPRECATED
 
-# Hierarchy
+## Hierarchy
 
-**WidgetSizeConfig**
+* **WidgetSizeConfig**
 
-# Properties
+## Index
 
-<a id="max"></a>
+### Properties
 
-## `<Optional>` max
+* [max](annotoconfig.widgetsizeconfig.md#optional-max)
 
-**● max**: *`number`*
+## Properties
 
-___
-<a id="min"></a>
+### `Optional` max
 
-## `<Optional>` min
-
-**● min**: *`number`*
-
-___
-
+• **max**? : *number*

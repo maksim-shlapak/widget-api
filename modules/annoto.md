@@ -1,6 +1,6 @@
+# Module: annoto
 
-
-# Index
+## Index
 
 ### Interfaces
 
@@ -24,70 +24,56 @@
 * [AnnotoReadyCallback](annoto.md#annotoreadycallback)
 * [AnnotoUxEventCallback](annoto.md#annotouxeventcallback)
 
----
+## Type aliases
 
-# Type aliases
+###  AnnotoEventType
 
-<a id="annotoeventtype"></a>
-
-##  AnnotoEventType
-
-**Ƭ AnnotoEventType**: * "ready" &#124; "metadata" &#124; "ux"
-*
+Ƭ **AnnotoEventType**: *"ready" | "metadata" | "ux"*
 
 ___
-<a id="annotometadatacallback"></a>
 
-##  AnnotoMetadataCallback
+###  AnnotoMetadataCallback
 
-**Ƭ AnnotoMetadataCallback**: *`function`*
+Ƭ **AnnotoMetadataCallback**: *function*
 
-#### Type declaration
-▸(metadata: *[AnnotoMetadata](../interfaces/annoto.annotometadata.md)*): `void`
+#### Type declaration:
+
+▸ (`metadata`: [AnnotoMetadata](../interfaces/annoto.annotometadata.md)): *void*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| metadata | [AnnotoMetadata](../interfaces/annoto.annotometadata.md) |
-
-**Returns:** `void`
+Name | Type |
+------ | ------ |
+`metadata` | [AnnotoMetadata](../interfaces/annoto.annotometadata.md) |
 
 ___
-<a id="annotoreadycallback"></a>
 
-##  AnnotoReadyCallback
+###  AnnotoReadyCallback
 
-**Ƭ AnnotoReadyCallback**: *`function`*
+Ƭ **AnnotoReadyCallback**: *function*
 
-#### Type declaration
-▸(api: *[AnnotoApi](../interfaces/annoto.annotoapi.md)*): `void`
+#### Type declaration:
+
+▸ (`api`: [AnnotoApi](../interfaces/annoto.annotoapi.md)): *void*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| api | [AnnotoApi](../interfaces/annoto.annotoapi.md) |
-
-**Returns:** `void`
+Name | Type |
+------ | ------ |
+`api` | [AnnotoApi](../interfaces/annoto.annotoapi.md) |
 
 ___
-<a id="annotouxeventcallback"></a>
 
-##  AnnotoUxEventCallback
+###  AnnotoUxEventCallback
 
-**Ƭ AnnotoUxEventCallback**: *`function`*
+Ƭ **AnnotoUxEventCallback**: *function*
 
-#### Type declaration
-▸(uxEvent: *[AnnotoUxEvent](../interfaces/annoto.annotouxevent.md)*): `void`
+#### Type declaration:
+
+▸ (`uxEvent`: [AnnotoUxEvent](../interfaces/annoto.annotouxevent.md)): *void*
 
 **Parameters:**
 
-| Name | Type |
-| ------ | ------ |
-| uxEvent | [AnnotoUxEvent](../interfaces/annoto.annotouxevent.md) |
-
-**Returns:** `void`
-
-___
-
+Name | Type |
+------ | ------ |
+`uxEvent` | [AnnotoUxEvent](../interfaces/annoto.annotouxevent.md) |

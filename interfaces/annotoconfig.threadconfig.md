@@ -1,27 +1,29 @@
+# Interface: ThreadConfig
 
+## Hierarchy
 
-# Hierarchy
+* **ThreadConfig**
 
-**ThreadConfig**
+## Index
 
-# Properties
+### Properties
 
-<a id="showreplies"></a>
+* [showReplies](annotoconfig.threadconfig.md#optional-showreplies)
+* [sort](annotoconfig.threadconfig.md#optional-sort)
 
-## `<Optional>` showReplies
+## Properties
 
-**● showReplies**: *`boolean`*
+### `Optional` showReplies
+
+• **showReplies**? : *boolean*
 
 If set to true, when widget is loaded all the replies to comments will be shown.
 
 ___
-<a id="sort"></a>
 
-## `<Optional>` sort
+### `Optional` sort
 
-**● sort**: *[SortByType](../modules/annotoconfig.md#sortbytype)*
+• **sort**? : *[SortByType](../modules/annotoconfig.md#sortbytype)*
 
-The default sorting to use on startup. Default: 'most\_recent'
-
-___
-
+The default sorting to use on startup.
+Default: 'most_recent'

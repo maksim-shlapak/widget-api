@@ -1,30 +1,31 @@
+# Interface: ControlsDescriptorVideoRatioOffsets
 
+## Hierarchy
 
-# Hierarchy
+* **ControlsDescriptorVideoRatioOffsets**
 
-**ControlsDescriptorVideoRatioOffsets**
+## Index
 
-# Properties
+### Properties
 
-<a id="center"></a>
+* [center](playeradaptor.controlsdescriptorvideoratiooffsets.md#optional-center)
+* [left](playeradaptor.controlsdescriptorvideoratiooffsets.md#left)
+* [top](playeradaptor.controlsdescriptorvideoratiooffsets.md#top)
 
-## `<Optional>` center
+## Properties
 
-**● center**: *`boolean`*
+### `Optional` center
 
-___
-<a id="left"></a>
-
-##  left
-
-**● left**: *`number`*
-
-___
-<a id="top"></a>
-
-##  top
-
-**● top**: *`number`*
+• **center**? : *boolean*
 
 ___
 
+###  left
+
+• **left**: *number*
+
+___
+
+###  top
+
+• **top**: *number*

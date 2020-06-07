@@ -1,23 +1,24 @@
+# Interface: Thumbnails
 
+## Hierarchy
 
-# Hierarchy
+* **Thumbnails**
 
-**Thumbnails**
+## Index
 
-# Properties
+### Properties
 
-<a id="default"></a>
+* [default](annotoconfig.thumbnails.md#default)
+* [mobile](annotoconfig.thumbnails.md#optional-mobile)
 
-##  default
+## Properties
 
-**● default**: *`string`*
+###  default
 
-___
-<a id="mobile"></a>
-
-## `<Optional>` mobile
-
-**● mobile**: *`string`*
+• **default**: *string*
 
 ___
 
+### `Optional` mobile
+
+• **mobile**? : *string*

@@ -1,34 +1,35 @@
+# Interface: ContentCountersBase
 
+## Hierarchy
 
-# Hierarchy
+* **ContentCountersBase**
 
-**ContentCountersBase**
+  ↳ [ContentCounters](annoto.contentcounters.md)
 
-↳  [ContentCounters](annoto.contentcounters.md)
+  ↳ [VisibleCountersData](annoto.visiblecountersdata.md)
 
-↳  [VisibleCountersData](annoto.visiblecountersdata.md)
+## Index
 
-# Properties
+### Properties
 
-<a id="count"></a>
+* [count](annoto.contentcountersbase.md#optional-count)
+* [emotions](annoto.contentcountersbase.md#optional-emotions)
+* [rootCount](annoto.contentcountersbase.md#optional-rootcount)
 
-## `<Optional>` count
+## Properties
 
-**● count**: *`number`*
+### `Optional` count
 
-___
-<a id="emotions"></a>
-
-## `<Optional>` emotions
-
-**● emotions**: *`any`*
-
-___
-<a id="rootcount"></a>
-
-## `<Optional>` rootCount
-
-**● rootCount**: *`number`*
+• **count**? : *number*
 
 ___
 
+### `Optional` emotions
+
+• **emotions**? : *any*
+
+___
+
+### `Optional` rootCount
+
+• **rootCount**? : *number*

@@ -1,50 +1,59 @@
+# Interface: CommentsCounters
 
+## Hierarchy
 
-# Hierarchy
+  ↳ [ContentCounters](annoto.contentcounters.md)
 
-↳  [ContentCounters](annoto.contentcounters.md)
+  ↳ **CommentsCounters**
 
-**↳ CommentsCounters**
+## Index
 
-# Properties
+### Properties
 
-<a id="count"></a>
+* [count](annoto.commentscounters.md#optional-count)
+* [countDiff](annoto.commentscounters.md#optional-countdiff)
+* [emotions](annoto.commentscounters.md#optional-emotions)
+* [rootCount](annoto.commentscounters.md#optional-rootcount)
+* [rootCountDiff](annoto.commentscounters.md#optional-rootcountdiff)
 
-## `<Optional>` count
+## Properties
 
-**● count**: *`number`*
+### `Optional` count
 
-___
-<a id="countdiff"></a>
+• **count**? : *number*
 
-## `<Optional>` countDiff
-
-**● countDiff**: *`number`*
-
-___
-<a id="emotions"></a>
-
-## `<Optional>` emotions
-
-**● emotions**: *`object`*
-
-#### Type declaration
-
-[key: `string`]: `number`
-
-___
-<a id="rootcount"></a>
-
-## `<Optional>` rootCount
-
-**● rootCount**: *`number`*
-
-___
-<a id="rootcountdiff"></a>
-
-## `<Optional>` rootCountDiff
-
-**● rootCountDiff**: *`number`*
+*Inherited from [ContentCountersBase](annoto.contentcountersbase.md).[count](annoto.contentcountersbase.md#optional-count)*
 
 ___
 
+### `Optional` countDiff
+
+• **countDiff**? : *number*
+
+___
+
+### `Optional` emotions
+
+• **emotions**? : *object*
+
+*Inherited from [ContentCounters](annoto.contentcounters.md).[emotions](annoto.contentcounters.md#optional-emotions)*
+
+*Overrides [ContentCountersBase](annoto.contentcountersbase.md).[emotions](annoto.contentcountersbase.md#optional-emotions)*
+
+#### Type declaration:
+
+* \[ **key**: *string*\]: number
+
+___
+
+### `Optional` rootCount
+
+• **rootCount**? : *number*
+
+*Inherited from [ContentCountersBase](annoto.contentcountersbase.md).[rootCount](annoto.contentcountersbase.md#optional-rootcount)*
+
+___
+
+### `Optional` rootCountDiff
+
+• **rootCountDiff**? : *number*

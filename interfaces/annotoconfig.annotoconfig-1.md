@@ -1,150 +1,161 @@
+# Interface: AnnotoConfig
 
+## Hierarchy
 
-# Hierarchy
+* **AnnotoConfig**
 
-**AnnotoConfig**
+## Index
 
-# Properties
+### Properties
 
-<a id="align"></a>
+* [align](annotoconfig.annotoconfig-1.md#optional-align)
+* [clientId](annotoconfig.annotoconfig-1.md#clientid)
+* [demoMode](annotoconfig.annotoconfig-1.md#demomode)
+* [features](annotoconfig.annotoconfig-1.md#optional-features)
+* [fsZIndex](annotoconfig.annotoconfig-1.md#optional-fszindex)
+* [helpUrl](annotoconfig.annotoconfig-1.md#optional-helpurl)
+* [launchSource](annotoconfig.annotoconfig-1.md#optional-launchsource)
+* [locale](annotoconfig.annotoconfig-1.md#optional-locale)
+* [margins](annotoconfig.annotoconfig-1.md#optional-margins)
+* [phonePosition](annotoconfig.annotoconfig-1.md#optional-phoneposition)
+* [position](annotoconfig.annotoconfig-1.md#optional-position)
+* [relativePositionElement](annotoconfig.annotoconfig-1.md#optional-relativepositionelement)
+* [thread](annotoconfig.annotoconfig-1.md#optional-thread)
+* [ux](annotoconfig.annotoconfig-1.md#optional-ux)
+* [widgets](annotoconfig.annotoconfig-1.md#widgets)
+* [width](annotoconfig.annotoconfig-1.md#optional-width)
+* [zIndex](annotoconfig.annotoconfig-1.md#optional-zindex)
 
-## `<Optional>` align
+## Properties
 
-**● align**: *[WidgetAlignConfig](annotoconfig.widgetalignconfig.md)*
+### `Optional` align
+
+• **align**? : *[WidgetAlignConfig](annotoconfig.widgetalignconfig.md)*
+
+Specifies how to align the widget relative to the player
+
+**`default`** { }
 
 ___
-<a id="clientid"></a>
 
-##  clientId
+###  clientId
 
-**● clientId**: *`string`*
-
-___
-<a id="demomode"></a>
-
-##  demoMode
-
-**● demoMode**: *`boolean`*
+• **clientId**: *string*
 
 ___
-<a id="features"></a>
 
-## `<Optional>` features
+###  demoMode
 
-**● features**: *[AnnotoFeatures](annotoconfig.annotofeatures.md)*
+• **demoMode**: *boolean*
+
+___
+
+### `Optional` features
+
+• **features**? : *[AnnotoFeatures](annotoconfig.annotofeatures.md)*
 
 Enable/disable Features
 
 ___
-<a id="fszindex"></a>
 
-## `<Optional>` fsZIndex
+### `Optional` fsZIndex
 
-**● fsZIndex**: *`number`*
+• **fsZIndex**? : *number*
 
-same as zIndex, only for when the player is in fullscreen. Default value: 100
-
-___
-<a id="height"></a>
-
-## `<Optional>` height
-
-**● height**: *[WidgetSizeConfig](annotoconfig.widgetsizeconfig.md)*
+same as zIndex, only for when the player is in fullscreen.
+Default value: 100
 
 ___
-<a id="helpurl"></a>
 
-## `<Optional>` helpUrl
+### `Optional` helpUrl
 
-**● helpUrl**: *`string`*
-
-___
-<a id="launchsource"></a>
-
-## `<Optional>` launchSource
-
-**● launchSource**: *[LaunchSourceConfig](annotoconfig.launchsourceconfig.md)*
+• **helpUrl**? : *string*
 
 ___
-<a id="locale"></a>
 
-## `<Optional>` locale
+### `Optional` launchSource
 
-**● locale**: *`string`*
-
-Language code for the widget. Default: 'en'
+• **launchSource**? : *[LaunchSourceConfig](annotoconfig.launchsourceconfig.md)*
 
 ___
-<a id="margins"></a>
 
-## `<Optional>` margins
+### `Optional` locale
 
-**● margins**: *[WidgetMargins](annotoconfig.widgetmargins.md)*
+• **locale**? : *string*
 
-___
-<a id="phoneposition"></a>
-
-## `<Optional>` phonePosition
-
-**● phonePosition**: * "right" &#124; "left"
-*
+Language code for the widget.
+Default: 'en'
 
 ___
-<a id="position"></a>
 
-## `<Optional>` position
+### `Optional` margins
 
-**● position**: * "right" &#124; "left" &#124; "bottom"
-*
+• **margins**? : *[WidgetMargins](annotoconfig.widgetmargins.md)*
 
 ___
-<a id="relativepositionelement"></a>
 
-## `<Optional>` relativePositionElement
+### `Optional` phonePosition
 
-**● relativePositionElement**: * `string` &#124; `Element`
-*
+• **phonePosition**? : *"right" | "left"*
 
-___
-<a id="thread"></a>
+Position the widget on the right or on the left side for mobile devices
 
-## `<Optional>` thread
-
-**● thread**: *[ThreadConfig](annotoconfig.threadconfig.md)*
+**`default`** position same as position prop
 
 ___
-<a id="ux"></a>
 
-## `<Optional>` ux
+### `Optional` position
 
-**● ux**: *[UxConfig](annotoconfig.uxconfig.md)*
+• **position**? : *"right" | "left"*
+
+Position the widget on the right or on the left side
+
+**`default`** 'right'
+
+___
+
+### `Optional` relativePositionElement
+
+• **relativePositionElement**? : *string | Element*
+
+___
+
+### `Optional` thread
+
+• **thread**? : *[ThreadConfig](annotoconfig.threadconfig.md)*
+
+___
+
+### `Optional` ux
+
+• **ux**? : *[UxConfig](annotoconfig.uxconfig.md)*
 
 Configuration options that affect the user experience
 
 ___
-<a id="widgets"></a>
 
-##  widgets
+###  widgets
 
-**● widgets**: *[WidgetConfig](annotoconfig.widgetconfig.md)[]*
+• **widgets**: *[WidgetConfig](annotoconfig.widgetconfig.md)[]*
 
-Widget configuration settings. NOTE: only single widget is supported. the array is for future use.
-
-___
-<a id="width"></a>
-
-## `<Optional>` width
-
-**● width**: *[WidgetSizeConfig](annotoconfig.widgetsizeconfig.md)*
-
-___
-<a id="zindex"></a>
-
-## `<Optional>` zIndex
-
-**● zIndex**: *`number`*
-
-The widget is position is absolute on page. Set the zIndex to appropriate value to make it visible and not iterfer with other elements. Default value: 100
+Widget configuration settings.
+NOTE: only single widget is supported. the array is for future use.
 
 ___
 
+### `Optional` width
+
+• **width**? : *[WidgetSizeConfig](annotoconfig.widgetsizeconfig.md)*
+
+DEPRECATED
+use ux.maxWidth instead
+
+___
+
+### `Optional` zIndex
+
+• **zIndex**? : *number*
+
+The widget is position is absolute on page.
+Set the zIndex to appropriate value to make it visible and not iterfer with other elements.
+Default value: 100

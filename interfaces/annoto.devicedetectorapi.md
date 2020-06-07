@@ -1,54 +1,55 @@
+# Interface: DeviceDetectorApi
 
+## Hierarchy
 
-# Hierarchy
+* **DeviceDetectorApi**
 
-**DeviceDetectorApi**
+## Index
 
-# Methods
+### Methods
 
-<a id="isdesktop"></a>
+* [isDesktop](annoto.devicedetectorapi.md#isdesktop)
+* [isLandscape](annoto.devicedetectorapi.md#optional-islandscape)
+* [isPhone](annoto.devicedetectorapi.md#isphone)
+* [isSmallScreen](annoto.devicedetectorapi.md#issmallscreen)
+* [isTablet](annoto.devicedetectorapi.md#istablet)
 
-##  isDesktop
+## Methods
 
-▸ **isDesktop**(): `boolean`
+###  isDesktop
 
-**Returns:** `boolean`
+▸ **isDesktop**(): *boolean*
 
-___
-<a id="islandscape"></a>
-
-## `<Optional>` isLandscape
-
-▸ **isLandscape**(): `boolean`
-
-**Returns:** `boolean`
-
-___
-<a id="isphone"></a>
-
-##  isPhone
-
-▸ **isPhone**(): `boolean`
-
-**Returns:** `boolean`
-
-___
-<a id="issmallscreen"></a>
-
-##  isSmallScreen
-
-▸ **isSmallScreen**(): `boolean`
-
-**Returns:** `boolean`
-
-___
-<a id="istablet"></a>
-
-##  isTablet
-
-▸ **isTablet**(): `boolean`
-
-**Returns:** `boolean`
+**Returns:** *boolean*
 
 ___
 
+### `Optional` isLandscape
+
+▸ **isLandscape**(): *boolean*
+
+**Returns:** *boolean*
+
+___
+
+###  isPhone
+
+▸ **isPhone**(): *boolean*
+
+**Returns:** *boolean*
+
+___
+
+###  isSmallScreen
+
+▸ **isSmallScreen**(): *boolean*
+
+**Returns:** *boolean*
+
+___
+
+###  isTablet
+
+▸ **isTablet**(): *boolean*
+
+**Returns:** *boolean*

@@ -1,69 +1,70 @@
+# Interface: ThreadMetadata
 
+## Hierarchy
 
-# Hierarchy
+* **ThreadMetadata**
 
-**ThreadMetadata**
+## Index
 
-# Properties
+### Properties
 
-<a id="createdat"></a>
+* [createdAt](annoto.threadmetadata.md#optional-createdat)
+* [emotionsCount](annoto.threadmetadata.md#optional-emotionscount)
+* [emotionsVotes](annoto.threadmetadata.md#optional-emotionsvotes)
+* [live](annoto.threadmetadata.md#optional-live)
+* [pbResolution](annoto.threadmetadata.md#optional-pbresolution)
+* [rating](annoto.threadmetadata.md#optional-rating)
+* [ratingDiff](annoto.threadmetadata.md#optional-ratingdiff)
+* [updatedAt](annoto.threadmetadata.md#optional-updatedat)
 
-## `<Optional>` createdAt
+## Properties
 
-**● createdAt**: *`Date`*
+### `Optional` createdAt
 
-___
-<a id="emotionscount"></a>
-
-## `<Optional>` emotionsCount
-
-**● emotionsCount**: *`number`*
-
-___
-<a id="emotionsvotes"></a>
-
-## `<Optional>` emotionsVotes
-
-**● emotionsVotes**: *`object`*
-
-#### Type declaration
-
-[key: `string`]: `number`
-
-___
-<a id="live"></a>
-
-## `<Optional>` live
-
-**● live**: *`boolean`*
-
-___
-<a id="pbresolution"></a>
-
-## `<Optional>` pbResolution
-
-**● pbResolution**: *`number`*
-
-___
-<a id="rating"></a>
-
-## `<Optional>` rating
-
-**● rating**: *`number`*
-
-___
-<a id="ratingdiff"></a>
-
-## `<Optional>` ratingDiff
-
-**● ratingDiff**: *`number`*
-
-___
-<a id="updatedat"></a>
-
-## `<Optional>` updatedAt
-
-**● updatedAt**: *`Date`*
+• **createdAt**? : *Date*
 
 ___
 
+### `Optional` emotionsCount
+
+• **emotionsCount**? : *number*
+
+___
+
+### `Optional` emotionsVotes
+
+• **emotionsVotes**? : *object*
+
+#### Type declaration:
+
+* \[ **key**: *string*\]: number
+
+___
+
+### `Optional` live
+
+• **live**? : *boolean*
+
+___
+
+### `Optional` pbResolution
+
+• **pbResolution**? : *number*
+
+___
+
+### `Optional` rating
+
+• **rating**? : *number*
+
+___
+
+### `Optional` ratingDiff
+
+• **ratingDiff**? : *number*
+
+___
+
+### `Optional` updatedAt
+
+• **updatedAt**? : *Date*

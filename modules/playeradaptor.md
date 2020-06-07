@@ -1,6 +1,16 @@
+# Module: playerAdaptor
 
+## Index
 
-# Index
+### References
+
+* [ControlsDescriptor](playeradaptor.md#controlsdescriptor)
+* [ControlsDescriptorFullscreen](playeradaptor.md#controlsdescriptorfullscreen)
+* [ControlsDescriptorMouse](playeradaptor.md#controlsdescriptormouse)
+* [ControlsDescriptorTimeline](playeradaptor.md#controlsdescriptortimeline)
+* [ControlsDescriptorTrack](playeradaptor.md#controlsdescriptortrack)
+* [ControlsDescriptorTransitions](playeradaptor.md#controlsdescriptortransitions)
+* [ControlsDescriptorVideoRatioOffsets](playeradaptor.md#controlsdescriptorvideoratiooffsets)
 
 ### Interfaces
 
@@ -17,20 +27,54 @@
 
 * [PlayerEventCallback](playeradaptor.md#playereventcallback)
 
----
+## References
 
-# Type aliases
+###  ControlsDescriptor
 
-<a id="playereventcallback"></a>
-
-##  PlayerEventCallback
-
-**Ƭ PlayerEventCallback**: *`function`*
-
-#### Type declaration
-▸(): `void`
-
-**Returns:** `void`
+• **ControlsDescriptor**:
 
 ___
 
+###  ControlsDescriptorFullscreen
+
+• **ControlsDescriptorFullscreen**:
+
+___
+
+###  ControlsDescriptorMouse
+
+• **ControlsDescriptorMouse**:
+
+___
+
+###  ControlsDescriptorTimeline
+
+• **ControlsDescriptorTimeline**:
+
+___
+
+###  ControlsDescriptorTrack
+
+• **ControlsDescriptorTrack**:
+
+___
+
+###  ControlsDescriptorTransitions
+
+• **ControlsDescriptorTransitions**:
+
+___
+
+###  ControlsDescriptorVideoRatioOffsets
+
+• **ControlsDescriptorVideoRatioOffsets**:
+
+## Type aliases
+
+###  PlayerEventCallback
+
+Ƭ **PlayerEventCallback**: *function*
+
+#### Type declaration:
+
+▸ (): *void*
