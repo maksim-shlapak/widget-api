@@ -5,24 +5,39 @@
 import { PlayerAdaptorApi } from './player-adaptor';
 import { MediaDetails } from './media-details';
 
+/**
+ * DEPRECATED
+ */
 export interface WidgetSizeConfig {
-    min?: number;
     max?: number;
 }
 
+/**
+ * Specifies how to position the widget reletive to the player
+ */
 export interface WidgetAlignConfig {
-    vertical?: string;
-    horizontal?: string;
+    vertical?: 'top' | 'center' | 'bottom';
+    /**
+     * 'element_edge' - outside the player right next to it
+     * 'inner' - as an overlay inside the player on it's edge
+     * 'screen_edge' - fixed position on the screen edge instead of relative to the player 
+     * @default 'element_edge'
+     */
+    horizontal?: 'element_edge' | 'inner' | 'screen_edge';
 }
 
+/**
+ * Optional Margins from page edges for positioning the widget.
+ * Has effect only when:
+ * 1. player not in full screen
+ * 2. widget is not overaly on top of the player
+ * 3. ux is not sidePanel
+ */
 export interface WidgetMargins {
     left?: number;
     right?: number;
     top?: number;
     bottom?: number;
-    min?: number;
-    rightSmall?: number;
-    minAdaptive?: number;
 }
 
 export type SortByType = 'most_recent' | 'top_rated' | 'by_timetag';
@@ -70,10 +85,13 @@ export interface StatsConfig {
 export interface WidgetConfig {
     player: PlayerConfig;
     timeline?: TimelineConfig;
+    /**
+     * DEPRACATED. use ux.openOnLoad instead
+     */
     openOnLoad?: boolean;
     demoDiscussion?: string;
     /**
-     * @description If provided the discusion widget will be embedded inside the host element instead of as overlay
+     * If provided the discusion widget will be embedded inside the host element instead of as overlay
      * The size of the widget is responsive and set to 100% width and height of the host element.
      */
     host?: HTMLElement;
@@ -109,21 +127,64 @@ export interface AnnotoFeatures {
 export interface UxConfig {
     /**
      * If set to true comments start will be at the top instead of bottom.
-     * false by default.
+     * @default false
      */
     commentsTopToBottom?: boolean;
     /**
      * if set to true widget position will be fixed and user won't be able to drag it.
-     * false by default.
+     * @default false
      */
     draggableDisabled?: boolean;
     /**
-     * if set to true, the widget will behave like a side panel if open.
-     * 1. Will take full available height of the player.element / relativePositionElement.
+     * if set to true, the widget will behave like a side panel:
+     * 1. Will take full available height of the player.element
      * 2. Will not be draggable.
-     * // false by default. 
+     * 3. Will be position side by side with the player.
+     * 4. Will openOnLoad by default.
+     * 5. if there is not space to the side of the player will fallback to regualer inner overlay behaviour.
+     * 6. the width is responsive taking available space. width.max can be used to limit.
+     * @default false
      */
-    sidePanel?: boolean; 
+    sidePanelLayout?: boolean;
+    /**
+     * Enables side panel ux for player fullscreen. by default overlay is used in fullscreen.
+     * @default false
+     */
+    sidePanelFullScreen?: boolean;
+    /**
+     * Width of the side panel in player fullscreen in pixels
+     * has effect only if sidePanelFullScreen is enabled
+     * @default 370
+     */
+    sidePanelFullScreenWidth?: number;
+    /**
+     * If enabled the sidePanel will:
+     * 1. overlay the video player instead of positioning on the side of it.
+     * 2. will always be full height and never fallback to draggable.
+     * 3. will not openOnLoad by default
+     * @default false
+     */
+    sidePanelOverlay?: boolean;
+    /**
+     * Width of the overlay side panel
+     * has effect only if sidePanelOverlay is enabled
+     * @default 370
+     */
+    sidePanelOverlayWidth?: number;
+    /**
+     * Load widget in open state on first boot.
+     * By default the widget is loaded closed, and after timeout a kuku is shown
+     * promting user to comment.
+     * @default false
+     */
+    openOnLoad?: boolean;
+    /**
+     * If povided will limit the responsive widget width.
+     * Has effect when widget is positioned outside of the player.
+     * Has no effect when widget is overlay inside the player or when player is in full screen.
+     * @default 460
+     */
+    maxWidth?: number;
     /**
      * Triggers that will automatically pause the player.
      * All true by default.
@@ -167,12 +228,27 @@ export interface UxConfig {
 
 export interface AnnotoConfig {
     clientId: string;
-    position?: 'right' | 'left' | 'bottom';
+    /**
+     * Position the widget on the right or on the left side
+     * @default 'right'
+     */
+    position?: 'right' | 'left';
+    /**
+     * Position the widget on the right or on the left side for mobile devices
+     * @default position same as position prop
+     */
     phonePosition?: 'right' | 'left';
     relativePositionElement?: string | Element;
+    /**
+     * Specifies how to align the widget relative to the player
+     * @default { }
+     */
     align?: WidgetAlignConfig;
+    /**
+     * DEPRECATED
+     * use ux.maxWidth instead
+     */
     width?: WidgetSizeConfig;
-    height?: WidgetSizeConfig;
     margins?: WidgetMargins;
     /**
      * Configuration options that affect the user experience
