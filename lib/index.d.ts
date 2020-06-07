@@ -1,4 +1,5 @@
 /**
+ * @packageDocumentation
  * @module annoto
  */
 
@@ -36,10 +37,10 @@ export interface AnnotoApi {
     getMetadata(): AnnotoMetadata;
 }
 
-type AnnotoEventType = 'ready' | 'metadata' | 'ux';
-type AnnotoReadyCallback = (api: AnnotoApi) => void;
-type AnnotoMetadataCallback = (metadata: AnnotoMetadata) => void;
-type AnnotoUxEventCallback = (uxEvent: AnnotoUxEvent) => void;
+export type AnnotoEventType = 'ready' | 'metadata' | 'ux';
+export type AnnotoReadyCallback = (api: AnnotoApi) => void;
+export type AnnotoMetadataCallback = (metadata: AnnotoMetadata) => void;
+export type AnnotoUxEventCallback = (uxEvent: AnnotoUxEvent) => void;
 
 export interface Annoto {
     on(event: AnnotoEventType, cb: AnnotoReadyCallback | AnnotoMetadataCallback | AnnotoUxEventCallback): void;
