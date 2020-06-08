@@ -20,6 +20,7 @@
 * [stats](annotoconfig.annotofeatures.md#optional-stats)
 * [tabs](annotoconfig.annotofeatures.md#optional-tabs)
 * [threadVote](annotoconfig.annotofeatures.md#optional-threadvote)
+* [timeline](annotoconfig.annotofeatures.md#optional-timeline)
 * [userPreferences](annotoconfig.annotofeatures.md#optional-userpreferences)
 * [voteEmotions](annotoconfig.annotofeatures.md#optional-voteemotions)
 
@@ -94,6 +95,12 @@ ___
 ### `Optional` threadVote
 
 • **threadVote**? : *boolean*
+
+___
+
+### `Optional` timeline
+
+• **timeline**? : *boolean*
 
 ___
 
