@@ -118,6 +118,7 @@ export interface AnnotoFeatures {
     voteEmotions?: boolean;
     commentSentiment?: boolean;
     minibar?: boolean;
+    timeline?: boolean;
     stats?: boolean;   // if enabled StatsConfig must be provided
     popout?: boolean;  // Does nothing at the moment. For future use
 }
