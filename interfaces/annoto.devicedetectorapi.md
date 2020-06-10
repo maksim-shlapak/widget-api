@@ -8,6 +8,7 @@
 
 ### Methods
 
+* [detect](annoto.devicedetectorapi.md#optional-detect)
 * [isDesktop](annoto.devicedetectorapi.md#isdesktop)
 * [isLandscape](annoto.devicedetectorapi.md#optional-islandscape)
 * [isPhone](annoto.devicedetectorapi.md#isphone)
@@ -15,6 +16,14 @@
 * [isTablet](annoto.devicedetectorapi.md#istablet)
 
 ## Methods
+
+### `Optional` detect
+
+▸ **detect**(): *void*
+
+**Returns:** *void*
+
+___
 
 ###  isDesktop
 
