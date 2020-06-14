@@ -9,4 +9,5 @@ export interface DeviceDetectorApi {
     isTablet(): boolean;
     isDesktop(): boolean;
     isLandscape?(): boolean;
+    detect?(): void;
 }
