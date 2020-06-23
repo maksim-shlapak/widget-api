@@ -11,7 +11,8 @@ module.exports = {
             ),
             publish: series(
                 rimraf('docs'),
-                'typedoc lib/ --platform gitbook --theme markdown --hideSources',
+                'typedoc lib/ --theme default --plugin typedoc-plugin-external-module-name',
+                // 'typedoc lib/ --platform gitbook --theme markdown --hideSources',
                 'node tasks/ghpages.js',
             ),
             json: 'typedoc lib/ --json docs/typedoc.json',
