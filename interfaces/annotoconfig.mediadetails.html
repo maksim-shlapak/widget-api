@@ -98,7 +98,7 @@
 					<div class="tsd-signature tsd-kind-icon">author<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/media-details.d.ts#L15">media-details.d.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/media-details.d.ts#L21">media-details.d.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -108,9 +108,14 @@
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/media-details.d.ts#L13">media-details.d.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/media-details.d.ts#L19">media-details.d.ts:19</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Media description</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="group" class="tsd-anchor"></a>
@@ -118,29 +123,68 @@
 					<div class="tsd-signature tsd-kind-icon">group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>description<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>privateThread<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>thumbnails<span class="tsd-signature-symbol">?: </span><a href="annotoconfig.thumbnails.html" class="tsd-signature-type">Thumbnails</a><span class="tsd-signature-symbol">; </span>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"playlist"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"users"</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/media-details.d.ts#L16">media-details.d.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/media-details.d.ts#L27">media-details.d.ts:27</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Course/group details
+								If provided the analytics will be categorised by groups
+							In addition allows to have private discussions per group for same media.</p>
+						</div>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> description<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Group description</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Unique group identifier</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> private<wbr>Thread<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>If set to true the The discussion will be private to the group</p>
+									</div>
+									<dl class="tsd-comment-tags">
+										<dt>default</dt>
+										<dd><p>false</p>
+										</dd>
+									</dl>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> thumbnails<span class="tsd-signature-symbol">?: </span><a href="annotoconfig.thumbnails.html" class="tsd-signature-type">Thumbnails</a></h5>
 							</li>
 							<li class="tsd-parameter">
 								<h5>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Group title</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"playlist"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"users"</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<dl class="tsd-comment-tags">
+										<dt>default</dt>
+										<dd><p>&#39;playlist&#39;</p>
+										</dd>
+									</dl>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -151,7 +195,7 @@
 					<div class="tsd-signature tsd-kind-icon">thumbnails<span class="tsd-signature-symbol">:</span> <a href="annotoconfig.thumbnails.html" class="tsd-signature-type">Thumbnails</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/media-details.d.ts#L14">media-details.d.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/media-details.d.ts#L20">media-details.d.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -161,9 +205,14 @@
 					<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/media-details.d.ts#L12">media-details.d.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/media-details.d.ts#L15">media-details.d.ts:15</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Media Title</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -226,9 +275,6 @@
 						<a href="annotoconfig.playerconfig.html" class="tsd-kind-icon">Player<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="annotoconfig.statsconfig.html" class="tsd-kind-icon">Stats<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="annotoconfig.threadconfig.html" class="tsd-kind-icon">Thread<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
@@ -248,9 +294,6 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="annotoconfig.widgetmargins.html" class="tsd-kind-icon">Widget<wbr>Margins</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="annotoconfig.widgetsizeconfig.html" class="tsd-kind-icon">Widget<wbr>Size<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="../modules/annotoconfig.html#sortbytype" class="tsd-kind-icon">Sort<wbr>ByType</a>
