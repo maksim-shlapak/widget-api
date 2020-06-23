@@ -8,6 +8,7 @@ import { MediaDetails } from './media-details';
 
 /**
  * DEPRECATED
+ * @internal
  */
 export interface WidgetSizeConfig {
     max?: number;
@@ -15,8 +16,13 @@ export interface WidgetSizeConfig {
 
 /**
  * Specifies how to position the widget reletive to the player
+ * or screen (if horizontal = 'screen_edge')
  */
 export interface WidgetAlignConfig {
+    /**
+     * Vertical alignment for positioning the widget
+     * @default 'center'
+     */
     vertical?: 'top' | 'center' | 'bottom';
     /**
      * 'element_edge' - outside the player right next to it
@@ -59,6 +65,9 @@ export interface PlayerConfig {
     type: string;
     element?: string | Element;
     api?: PlayerAdaptorApi;
+    /**
+     * @internal
+     */
     wide?: boolean;
     params?: any;
     mediaSrc?(): string; // for setting the player media source.
@@ -66,16 +75,35 @@ export interface PlayerConfig {
 }
 
 export interface TimelineConfig {
-    embedded?: boolean;  // Deprecated. The value is ignored. Embedded timeline is not supported.
+    /**
+     * @internal
+     * DEPRECATED. The value is ignored. Embedded timeline is not supported.
+     */
+    embedded?: boolean;  
     height?: number;
     overlayVideo?: boolean;
     disableDockPadding?: boolean;
+    /**
+     * @internal
+     */
     positionTopInFullScreen?: boolean;
+    /**
+     * @internal
+     */
     scrubberAlwaysOn?: boolean;
+    /**
+     * @internal
+     */
     scrubberHeight?: number;
+    /**
+     * @internal
+     */
     scrubberColor?: string;
 }
 
+/**
+ * @internal
+ */
 export interface StatsConfig {
     /**
      * 
@@ -88,14 +116,21 @@ export interface WidgetConfig {
     timeline?: TimelineConfig;
     /**
      * DEPRACATED. use ux.openOnLoad instead
+     * @internal
      */
     openOnLoad?: boolean;
+    /**
+     * @internal
+     */
     demoDiscussion?: string;
     /**
      * If provided the discusion widget will be embedded inside the host element instead of as overlay
      * The size of the widget is responsive and set to 100% width and height of the host element.
      */
     host?: HTMLElement;
+    /**
+     * @internal
+     */
     stats?: StatsConfig;
 }
 
@@ -113,13 +148,22 @@ export interface AnnotoFeatures {
     privateNotesSubmit?: boolean;
     userPreferences?: boolean;
     darkTheme?: boolean;
+    /**
+     * @internal
+     */
     cta?: boolean;
     threadVote?: boolean;
     voteEmotions?: boolean;
     commentSentiment?: boolean;
     minibar?: boolean;
     timeline?: boolean;
+    /**
+     * @internal
+     */
     stats?: boolean;   // if enabled StatsConfig must be provided
+    /**
+     * @internal
+     */
     popout?: boolean;  // Does nothing at the moment. For future use
 }
 
@@ -243,12 +287,12 @@ export interface AnnotoConfig {
     relativePositionElement?: string | Element;
     /**
      * Specifies how to align the widget relative to the player
-     * @default { }
      */
     align?: WidgetAlignConfig;
     /**
      * DEPRECATED
      * use ux.maxWidth instead
+     * @internal
      */
     width?: WidgetSizeConfig;
     margins?: WidgetMargins;
@@ -258,7 +302,7 @@ export interface AnnotoConfig {
     ux?: UxConfig;
     /**
      * Language code for the widget.
-     * Default: 'en'
+     * @default 'en'
      */
     locale?: string;
     /**
@@ -277,12 +321,12 @@ export interface AnnotoConfig {
     /**
      * The widget is position is absolute on page.
      * Set the zIndex to appropriate value to make it visible and not iterfer with other elements.
-     * Default value: 100
+     * @default 100
      */
     zIndex?: number;
     /**
      * same as zIndex, only for when the player is in fullscreen.
-     * Default value: 100
+     * @default 100
      */
     fsZIndex?: number;
 }

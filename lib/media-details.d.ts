@@ -9,16 +9,43 @@ interface Thumbnails {
 }
 
 export interface MediaDetails {
-    title: string; // Media Title
-    description?: string; // (Optional) Media description
+    /**
+     * Media Title
+     */
+    title: string;
+    /**
+     * Media description
+     */
+    description?: string;
     thumbnails?: Thumbnails;
     authorName?: string;
-    group?: {             // (Optional) Course/group
-        id: string | number; // Unique group identifier
-        type?: 'playlist' | 'users'; // playlist is the default
-        title: string; // Group title
-        privateThread?: boolean; // false by default. If set to true the The discussion will be private to the group.
-        description?: string; // (Optional) Group description
+    /**
+     * Course/group details
+     * If provided the analytics will be categorised by groups
+     * In addition allows to have private discussions per group for same media.
+     */
+    group?: {
+        /**
+         * Unique group identifier
+         */
+        id: string | number;
+        /**
+         * Group title
+         */
+        title: string;
+        /**
+         * If set to true the The discussion will be private to the group
+         * @default false
+         */
+        privateThread?: boolean;
+        /**
+         * @default 'playlist'
+         */
+        type?: 'playlist' | 'users';
+        /**
+         * Group description
+         */
+        description?: string;
         thumbnails?: Thumbnails;
     };
 }
