@@ -170,6 +170,8 @@ export interface AnnotoFeatures {
 /**
  * User experience configuration
  */
+
+export type ThemeType = 'default' | 'dark';
 export interface UxConfig {
     /**
      * If set to true comments start will be at the top instead of bottom.
@@ -257,6 +259,13 @@ export interface UxConfig {
          */
         timelineUgcTap?: boolean;
     };
+
+    /**
+     * Select the widget theme
+     * If set to 'dark', the dark theme will always be used even when the widget is not in overlay.
+     * @default 'default'
+     */
+    theme?: ThemeType;
     /**
      * For SSO enabled integrations only.
      * If Provided, Will be called when user triggers Authentication.
