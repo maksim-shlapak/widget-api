@@ -259,7 +259,6 @@ export interface UxConfig {
          */
         timelineUgcTap?: boolean;
     };
-
     /**
      * Select the widget theme
      * If set to 'dark', the dark theme will always be used even when the widget is not in overlay.
@@ -279,6 +278,29 @@ export interface UxConfig {
      * @returns {Promise<void> | void} If possible the promise should reslove/reject when the logout flow is finished.
      */
     logoutRequestHandle?(): Promise<void> | void;
+    /**
+     * @internal
+     * If people and presence are enabled for the site, this api can be implemented to add invites to one on one meetings
+     * @param params 
+     */
+    getOneOnOneSessionInvite?(params: IOneOnOneSessionInviteParams): Promise<IOneOnOneSessionInviteResult> | IOneOnOneSessionInviteResult;
+}
+
+/**
+ * @internal
+ */
+export interface IOneOnOneSessionInviteParams {
+    authorId: string;
+    invitedUserId: string;
+}
+/**
+ * @internal
+ */
+export interface IOneOnOneSessionInviteResult {
+    inviteUrl: string;
+    title?: string;
+    message?: string;
+    inviteButton?: string;
 }
 
 export interface AnnotoConfig {
