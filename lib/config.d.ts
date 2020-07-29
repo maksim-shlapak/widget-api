@@ -298,6 +298,7 @@ export interface IOneOnOneSessionInviteParams {
  */
 export interface IOneOnOneSessionInviteResult {
     inviteUrl: string;
+    inviteUrlText?: string;
     title?: string;
     message?: string;
     inviteButton?: string;
