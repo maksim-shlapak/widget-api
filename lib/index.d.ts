@@ -3,7 +3,7 @@
  * @module annoto
  */
 
-import { AnnotoConfig } from './config';
+import { AnnotoConfig, IWidgetBackendOptions } from './config';
 import { DeviceDetectorApi } from './device-detector';
 import { AnnotoMetadata } from './metadata';
 import { MediaDetails } from './media-details';
@@ -47,4 +47,4 @@ export interface Annoto {
     boot(config: AnnotoConfig): void;
 }
 
-export { AnnotoConfig, DeviceDetectorApi, AnnotoMetadata, MediaDetails, AnnotoUxEvent };
+export { AnnotoConfig, DeviceDetectorApi, AnnotoMetadata, MediaDetails, AnnotoUxEvent, IWidgetBackendOptions };

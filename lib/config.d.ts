@@ -304,6 +304,12 @@ export interface IOneOnOneSessionInviteResult {
     inviteButton?: string;
 }
 
+export interface IWidgetBackendOptions {
+    domain?: string;
+    apiUrl?: string;
+    authUrl?: string;
+    insightsUrl?: string;
+}
 export interface AnnotoConfig {
     clientId: string;
     /**
@@ -361,4 +367,6 @@ export interface AnnotoConfig {
      * @default 100
      */
     fsZIndex?: number;
+
+    backend?: IWidgetBackendOptions;
 }
