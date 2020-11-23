@@ -227,6 +227,13 @@ export interface UxConfig {
      */
     openOnLoad?: boolean;
     /**
+     * Load widget in close state on first boot (without kuku).
+     * By default the widget is loaded closed, and after timeout a kuku is shown
+     * promting user to comment.
+     * @default false
+     */
+    closeOnLoad?: boolean;
+    /**
      * If povided will limit the responsive widget width.
      * Has effect when widget is positioned outside of the player.
      * Has no effect when widget is overlay inside the player or when player is in full screen.
