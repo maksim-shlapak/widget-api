@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>WidgetConfig | Annoto Widget API - v1.11.0</title>
+	<title>IWidgetBackendOptions | Annoto Widget API - v1.11.0</title>
 	<meta name="description" content="Documentation for Annoto Widget API - v1.11.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules/annotoconfig.html">annotoConfig</a>
 				</li>
 				<li>
-					<a href="annotoconfig.widgetconfig.html">WidgetConfig</a>
+					<a href="annotoconfig.iwidgetbackendoptions.html">IWidgetBackendOptions</a>
 				</li>
 			</ul>
-			<h1>Interface WidgetConfig</h1>
+			<h1>Interface IWidgetBackendOptions</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">WidgetConfig</span>
+						<span class="target">IWidgetBackendOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -80,9 +80,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="annotoconfig.widgetconfig.html#host" class="tsd-kind-icon">host</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="annotoconfig.widgetconfig.html#player" class="tsd-kind-icon">player</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="annotoconfig.widgetconfig.html#timeline" class="tsd-kind-icon">timeline</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="annotoconfig.iwidgetbackendoptions.html#apiurl" class="tsd-kind-icon">api<wbr>Url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="annotoconfig.iwidgetbackendoptions.html#authurl" class="tsd-kind-icon">auth<wbr>Url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="annotoconfig.iwidgetbackendoptions.html#domain" class="tsd-kind-icon">domain</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="annotoconfig.iwidgetbackendoptions.html#insightsurl" class="tsd-kind-icon">insights<wbr>Url</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,38 +92,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="host" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> host</h3>
-					<div class="tsd-signature tsd-kind-icon">host<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLElement</span></div>
+					<a name="apiurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> api<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">api<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/config.d.ts#L130">config.d.ts:130</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>If provided the discusion widget will be embedded inside the host element instead of as overlay
-							The size of the widget is responsive and set to 100% width and height of the host element.</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="player" class="tsd-anchor"></a>
-					<h3>player</h3>
-					<div class="tsd-signature tsd-kind-icon">player<span class="tsd-signature-symbol">:</span> <a href="annotoconfig.playerconfig.html" class="tsd-signature-type">PlayerConfig</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/config.d.ts#L115">config.d.ts:115</a></li>
+							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/config.d.ts#L309">config.d.ts:309</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="timeline" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> timeline</h3>
-					<div class="tsd-signature tsd-kind-icon">timeline<span class="tsd-signature-symbol">:</span> <a href="annotoconfig.timelineconfig.html" class="tsd-signature-type">TimelineConfig</a></div>
+					<a name="authurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> auth<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">auth<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/config.d.ts#L116">config.d.ts:116</a></li>
+							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/config.d.ts#L310">config.d.ts:310</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="domain" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> domain</h3>
+					<div class="tsd-signature tsd-kind-icon">domain<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/config.d.ts#L308">config.d.ts:308</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="insightsurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> insights<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">insights<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Annoto/widget-api/blob/master/lib/config.d.ts#L311">config.d.ts:311</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -156,9 +161,27 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="annotoconfig.annotofeatures.html" class="tsd-kind-icon">Annoto<wbr>Features</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
 						<a href="annotoconfig.iwidgetbackendoptions.html" class="tsd-kind-icon">IWidget<wbr>Backend<wbr>Options</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="annotoconfig.iwidgetbackendoptions.html#apiurl" class="tsd-kind-icon">api<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="annotoconfig.iwidgetbackendoptions.html#authurl" class="tsd-kind-icon">auth<wbr>Url</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="annotoconfig.iwidgetbackendoptions.html#domain" class="tsd-kind-icon">domain</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="annotoconfig.iwidgetbackendoptions.html#insightsurl" class="tsd-kind-icon">insights<wbr>Url</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="annotoconfig.launchsourceconfig.html" class="tsd-kind-icon">Launch<wbr>Source<wbr>Config</a>
 					</li>
@@ -183,24 +206,9 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="annotoconfig.widgetalignconfig.html" class="tsd-kind-icon">Widget<wbr>Align<wbr>Config</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="annotoconfig.widgetconfig.html" class="tsd-kind-icon">Widget<wbr>Config</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="annotoconfig.widgetconfig.html#host" class="tsd-kind-icon">host</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="annotoconfig.widgetconfig.html#player" class="tsd-kind-icon">player</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="annotoconfig.widgetconfig.html#timeline" class="tsd-kind-icon">timeline</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="annotoconfig.widgetmargins.html" class="tsd-kind-icon">Widget<wbr>Margins</a>
 					</li>
