@@ -315,6 +315,7 @@ export interface IOneOnOneSessionInviteResult {
 export interface IWidgetBackendOptions {
     domain?: string;
     apiUrl?: string;
+    apiV2Url?: string;
     authUrl?: string;
     insightsUrl?: string;
 }
