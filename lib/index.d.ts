@@ -8,6 +8,8 @@ import { DeviceDetectorApi } from './device-detector';
 import { AnnotoMetadata } from './metadata';
 import { MediaDetails } from './media-details';
 import { AnnotoUxEvent } from './ux-event';
+import { IAnnotoStatsEvent } from './stats-event';
+import { IAnnotoVideoBenchmarkEvent } from './video-benchmark-event';
 
 export interface OriginProvider {
     /**
@@ -37,14 +39,16 @@ export interface AnnotoApi {
     getMetadata(): AnnotoMetadata;
 }
 
-export type AnnotoEventType = 'ready' | 'metadata' | 'ux';
+export type AnnotoEventType = 'ready' | 'metadata' | 'ux' | 'stats_events' | 'video_benchmark';
 export type AnnotoReadyCallback = (api: AnnotoApi) => void;
 export type AnnotoMetadataCallback = (metadata: AnnotoMetadata) => void;
 export type AnnotoUxEventCallback = (uxEvent: AnnotoUxEvent) => void;
+export type AnnotoStatsEventCallback = (statsEvent: IAnnotoStatsEvent) => void;
+export type AnnotoVideoBenchmarkCallback = (uxEvent: IAnnotoVideoBenchmarkEvent) => void;
 
 export interface Annoto {
-    on(event: AnnotoEventType, cb: AnnotoReadyCallback | AnnotoMetadataCallback | AnnotoUxEventCallback): void;
+    on(event: AnnotoEventType, cb: AnnotoReadyCallback | AnnotoMetadataCallback | AnnotoUxEventCallback | AnnotoStatsEventCallback | AnnotoVideoBenchmarkCallback): void;
     boot(config: AnnotoConfig): void;
 }
 
-export { AnnotoConfig, DeviceDetectorApi, AnnotoMetadata, MediaDetails, AnnotoUxEvent, IWidgetBackendOptions };
+export { AnnotoConfig, DeviceDetectorApi, AnnotoMetadata, MediaDetails, AnnotoUxEvent, IWidgetBackendOptions, IAnnotoStatsEvent, IAnnotoVideoBenchmarkEvent };
