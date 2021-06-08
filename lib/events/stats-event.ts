@@ -1,4 +1,4 @@
-export enum StatsType {
+export enum StatsTypeEnum {
     firstPlay = 1,
     commentTimetagTap,
     showReplyTap,
@@ -22,14 +22,29 @@ export enum StatsType {
     groupFollow,
 }
 
-export interface IAnnotoStatsEvent {
-    type: StatsType;
-    ugc_id?: number;
-    group_id: string;
-    visitor_id: string;
-    session_id: string;
-    ps?: number;
-    id?: string;
-    timestamp?: string;
+export interface IStatsEvent {
+    /**
+     * The type of the event
+     */
+    type: StatsTypeEnum;
+    /**
+     * The group Id provided on {@link MediaDetails}
+     */
+    group_id?: string;
+    /**
+     * Media source
+     */
     media_src: string;
+    /**
+     * Video timestamp in seconds
+     */
+    ps?: number;
+    /**
+     * Unique visitor identifier
+     */
+    visitor_id: string;
+    /**
+     * Unique session identifier
+     */
+    session_id: string;
 }
