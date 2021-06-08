@@ -17,7 +17,6 @@ module.exports = {
             html: {
                 script: series(
                     rimraf('docs'),
-                    rimraf('dist'),
                     'typedoc lib/ --theme default --watch',
                     open('docs/index.html')
                 ),
@@ -26,7 +25,6 @@ module.exports = {
             publish: {
                 script: series(
                     rimraf('docs'),
-                    rimraf('dist'),
                     'typedoc lib/ --theme default',
                     'node tasks/ghpages.js',
                 ),

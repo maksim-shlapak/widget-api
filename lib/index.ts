@@ -18,15 +18,7 @@ export interface Annoto {
     boot(config: AnnotoConfig): void;
 }
 
-export {
-    AnnotoConfig,
-    AnnotoApi,
-    DeviceDetectorApi,
-    OriginProvider,
-    AnnotoMetadata,
-    MediaDetails,
-    AnnotoUxEvent,
-    IWidgetBackendOptions,
-    IStatsEvent,
-    IVideoBenchmarkEvent
-};
+export * from './config';
+export * from './api';
+export * from './events';
+export * from './player-adapter';
