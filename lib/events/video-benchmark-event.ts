@@ -1,8 +1,3 @@
-/**
- * @packageDocumentation
- * @module annoto
- */
-
 export interface IAnnotoVideoBenchmarkEvent {
     group_id: string;
     visitor_id: string;

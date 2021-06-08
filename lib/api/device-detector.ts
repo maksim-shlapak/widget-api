@@ -1,8 +1,3 @@
-/**
- * @packageDocumentation
- * @module annoto
- */
-
 export interface DeviceDetectorApi {
     isSmallScreen(): boolean;
     isPhone(): boolean;

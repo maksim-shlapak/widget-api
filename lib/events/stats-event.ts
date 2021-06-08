@@ -1,8 +1,3 @@
-/**
- * @packageDocumentation
- * @module annoto
- */
-
 export enum StatsType {
     firstPlay = 1,
     commentTimetagTap,

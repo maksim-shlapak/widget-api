@@ -1,3 +1,3 @@
-## Overview
+# Overview
 
 Annoto Widget API Typings

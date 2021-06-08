@@ -1,16 +1,15 @@
 {
     "compilerOptions": {
+        "rootDir": "lib",
         "outDir": "./dist/",
         "noImplicitAny": true,
-        "module": "commonjs",
+        "moduleResolution": "node",
+        "module": "es2015",
         "target": "es5",
-        "allowJs": true,
-        "sourceMap": true,
-        "removeComments": true,
-        "typeRoots": [
-            "node_modules/@types",
-            "app/scripts/annoto-widget-api"
-        ],
+        "declaration": true,
+        "allowJs": false,
+        "sourceMap": false,
+        "removeComments": false,
         "lib": ["es2017", "dom"]
     },
     "exclude": [ "**/*.spec.ts" ]

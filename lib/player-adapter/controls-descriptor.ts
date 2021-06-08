@@ -1,6 +1,6 @@
 /**
- * @packageDocumentation
  * @module playerAdaptor
+ * @internal
  */
 
 /**

@@ -1,9 +1,8 @@
 /**
- * @packageDocumentation
- * @module playerAdaptor
+ * @module PlayerAdaptor
  */
 
-import { MediaDetails } from './media-details';
+import { MediaDetails } from '../config';
 import { ControlsDescriptor } from './controls-descriptor';
 
 export type PlayerEventCallback = () => void;
