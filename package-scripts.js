@@ -25,6 +25,7 @@ module.exports = {
             publish: {
                 script: series(
                     rimraf('docs'),
+                    rimraf('dist'),
                     'typedoc lib/ --theme default',
                     'node tasks/ghpages.js',
                 ),
