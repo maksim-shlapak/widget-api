@@ -22,7 +22,7 @@
     "help": "nps help",
     "start": "nps",
     "build": "nps build",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "postpublish": "nps doc.publish"
   },
   "devDependencies": {
