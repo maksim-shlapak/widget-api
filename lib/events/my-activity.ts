@@ -1,6 +1,6 @@
 import { IVideoBenchmarkHeatmap } from './video-benchmark-event';
 
-export interface IMyThreadActivity {
+export interface IMyActivity {
     /**
      * Quantity of comments
      */
